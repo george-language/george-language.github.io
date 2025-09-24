@@ -1,14 +1,3 @@
 theme: minima
 minima:
   skin: dark
-  nav:
-    - title: "Home"
-      url: /
-    - title: "About"
-      url: /about/
-    - title: "Install"
-      url: /docs/install/
-    - title: "Documentation"
-      url: /docs/
-    - title: "Guide Book"
-      url: /book/
