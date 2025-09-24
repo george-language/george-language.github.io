@@ -1,1 +1,12 @@
 theme: minima
+minima:
+  skin: dark
+  av:
+    - title: "Home"
+      url: /
+    - title: "About"
+      url: /about/about/
+    - title: "Documentation"
+      url: /docs/docs/
+    - title: "Guide Book"
+      url: /book/start/
