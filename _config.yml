@@ -1,7 +1,7 @@
 theme: minima
 minima:
   skin: dark
-  av:
+  nav:
     - title: "Home"
       url: /
     - title: "About"
