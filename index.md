@@ -23,7 +23,7 @@ title: "George Programming Language"
 - **It's Fast**
   GLang is implemented and optimized with the help of the Rust programming language.
 
-## Build It, All In George Language
+## Build It All
 - **Math Tools**
   Both an excellent calculator and tool. Use it to help learn math, or even automate your homework.
 - **Terminal & CLI**
