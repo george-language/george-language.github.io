@@ -1,5 +1,5 @@
 ---
 layout: page
-title: "Install George Language"
+title: "Install"
 permalink: /docs/install/
 ---

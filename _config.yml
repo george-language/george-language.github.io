@@ -5,8 +5,10 @@ minima:
     - title: "Home"
       url: /
     - title: "About"
-      url: /about/about/
+      url: /about/
+    - title: "Install"
+      url: /docs/install/
     - title: "Documentation"
-      url: /docs/docs/
+      url: /docs/
     - title: "Guide Book"
-      url: /book/start/
+      url: /book/

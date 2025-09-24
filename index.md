@@ -1,16 +1,16 @@
 ---
 layout: home
-title: "George Programming Language"
+title: ""
 ---
 
 <div style="text-align: center; padding: 3rem; background-color: #222; color: white; border-radius: 8px;">
   <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">George Language</h1>
   <p style="font-size: 1.25rem; margin-bottom: 2rem;">Modern programming for beginners</p>
 
-  <a href="/docs/install" style="display:inline-block; padding: 0.75rem 2rem; margin: 0.5rem; border: 2px solid white; border-radius: 6px; text-decoration: none; color: white; font-weight: bold;">
+  <a href="/docs/install/" style="display:inline-block; padding: 0.75rem 2rem; margin: 0.5rem; border: 2px solid white; border-radius: 6px; text-decoration: none; color: white; font-weight: bold;">
     Install
   </a>
-  <a href="/book/start" style="display:inline-block; padding: 0.75rem 2rem; margin: 0.5rem; border: 2px solid white; border-radius: 6px; text-decoration: none; color: white; font-weight: bold;">
+  <a href="/book/start/" style="display:inline-block; padding: 0.75rem 2rem; margin: 0.5rem; border: 2px solid white; border-radius: 6px; text-decoration: none; color: white; font-weight: bold;">
     Learn
   </a>
 </div>
