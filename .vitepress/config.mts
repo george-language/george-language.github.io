@@ -11,7 +11,7 @@ export default defineConfig({
 
     nav: [
       { text: "Home", link: "/" },
-      { text: "Install", link: "/docs/install" },
+      { text: "Install", link: "/docs/install/" },
       { text: "Learn", link: "/book" },
       { text: "Documentation", link: "/docs" },
       { text: "About", link: "/about" },
@@ -55,7 +55,14 @@ export default defineConfig({
       "/docs/": [
         {
           text: "Documentation",
-          items: [{ text: "Standard Docs", link: "/docs/" }],
+          items: [
+            { text: "Introduction", link: "/docs/" },
+            { text: "Download", link: "/docs/install/" },
+            {
+              text: "Installation Instructions",
+              link: "/docs/install/instructions",
+            },
+          ],
         },
       ],
     },
