@@ -91,6 +91,16 @@ export default defineConfig({
                 { text: "skip", link: "/docs/keywords/skip" },
               ],
             },
+            {
+              text: "Types",
+              items: [
+                { text: "number", link: "/docs/types/number" },
+                { text: "string", link: "/docs/types/string" },
+                { text: "list", link: "/docs/types/list" },
+                { text: "function", link: "/docs/types/function" },
+                { text: "builtin", link: "/docs/types/builtin" },
+              ],
+            },
           ],
         },
       ],

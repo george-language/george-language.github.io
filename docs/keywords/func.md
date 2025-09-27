@@ -3,7 +3,7 @@ title: "func"
 ---
 
 # Keyword: `func`
-_Functions are also types; representation: function_
+_Functions are [also types](/docs/types/function)_
 
 A function or function object.
 
