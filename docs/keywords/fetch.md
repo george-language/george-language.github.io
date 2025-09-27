@@ -11,3 +11,12 @@ fetch "path/to/my/module.glang";
 
 my_modules_function();
 ```
+
+The `fetch` keyword expects an expression resulting in a string.
+
+```
+fetch "module" + ".glang"; # this works
+
+obj my_module = "test.glang";
+fetch my_module; # this also works
+```
