@@ -44,7 +44,7 @@ They act as **global imports**, any GLang project on your system can use them.
 
 When you install a kennel, GLang gives it an **Easy Import Identifier (EII)**, usually the same as the kennel’s name.
 
-```glang
+```
 fetch kennel_name;
 
 kennels_function();
