@@ -22,4 +22,6 @@ obj X = 20; # this line will also cause an error
 
 In practice, it is best to make the constant name all uppercase, and keep it globally available.
 
+```
 stay MY_CONSTANT = 10;
+```
