@@ -111,6 +111,13 @@ export default defineConfig({
                 { text: "std_math", link: "/docs/modules/std_math" },
               ],
             },
+            {
+              text: "Kennels",
+              items: [
+                { text: "About Kennels", link: "/docs/kennels/" },
+                { text: "Creating Kennels", link: "/docs/kennels/creating" },
+              ],
+            },
           ],
         },
       ],
