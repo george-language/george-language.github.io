@@ -101,6 +101,15 @@ export default defineConfig({
                 { text: "builtin", link: "/docs/types/builtin" },
               ],
             },
+            {
+              text: "Modules",
+              items: [
+                { text: "std_os", link: "/docs/modules/std_os" },
+                { text: "std_format", link: "/docs/modules/std_format" },
+                { text: "std_hashmap", link: "/docs/modules/std_hashmap" },
+                { text: "std_math", link: "/docs/modules/std_math" },
+              ],
+            },
           ],
         },
       ],
