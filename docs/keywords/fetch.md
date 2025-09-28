@@ -4,7 +4,7 @@ title: "fetch"
 
 # Keyword: `fetch`
 
-Import an external `.glang` file. _If you are wanting to learn more about modules, see our [section on modules](/docs/modules/)._
+Import an external `.glang` file.
 
 ```
 fetch "path/to/my/module.glang";
@@ -19,4 +19,16 @@ fetch "module" + ".glang"; # this works
 
 obj my_module = "test.glang";
 fetch my_module; # this also works
+```
+
+Upon importing, objects are only appended to the current scope.
+
+```
+func import() {
+    fetch std_math;
+}
+
+import();
+
+bark(math_pi); # we cant access this, it's only inside of the 'import' function
 ```
