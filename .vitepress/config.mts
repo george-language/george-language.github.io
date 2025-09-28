@@ -124,7 +124,8 @@ export default defineConfig({
     },
 
     footer: {
-      message: "George Language is licensed under the GPL v3 openly.",
+      message:
+        'George Language is licensed under the GPL v3 openly. <a href="https://github.com/george-language/www.george-lang.org">Help improve this site.</a>',
       copyright: "Copyright (©) The George Language Foundation",
     },
   },
