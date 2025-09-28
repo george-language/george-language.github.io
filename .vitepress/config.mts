@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "George Language",
   description: "The George Programming Language",
+  base: "/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/assets/george_language_icon.svg",
