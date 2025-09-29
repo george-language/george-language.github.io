@@ -12,7 +12,7 @@ hero:
       text: Source Code
       link: https://github.com/george-language/glang
   image:
-    src: /assets/george_language_icon.svg
+    src: /george_language_icon.svg
     alt: GLang Logo
 
 features:
