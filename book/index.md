@@ -3,7 +3,6 @@ title: "Guide Book"
 ---
 
 # GLang Guidebook
-**Learn Through Actual Use**
 
 ## About
 This book serves as a way to learn GLang through actual use. We start from scratch and learn how GLang works, then in the final chapter, we build a personalized terminal command!
