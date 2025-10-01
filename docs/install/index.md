@@ -7,7 +7,7 @@ title: "Install"
 
 You can follow the install instructions [here](/docs/install/instructions), or install beta or previous versions [here](https://github.com/george-language/glang).
 
-[🪟 Download GLang for Windows (.exe)](https://github.com/george-language/glang/releases/latest/download/GeorgeLanguage+windows_setup.zip)
+[🪟 Download GLang for Windows (.exe)](https://github.com/george-language/glang/releases/latest/download/GeorgeLanguage+windows_setup.exe)
 
 [🍏 Download GLang for MacOS (.zip)](https://github.com/george-language/glang/releases/latest/download/GeorgeLanguage+macos_setup.zip)
 
