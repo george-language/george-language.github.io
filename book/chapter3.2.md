@@ -70,7 +70,7 @@ walk i = 0 through 10 step = 2 {
 
 ## Your Challenge 🤔
 
-Use a `walk` loop to output numbers 0 - 10000 counting by 100s (0, 100, 200).
+Use a `walk` loop to output numbers 0 - 10000 counting by 100s (0, 100, 200, etc.)
 
 ::: details Answer
 ```
