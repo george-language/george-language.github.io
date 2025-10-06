@@ -53,7 +53,7 @@ export default defineConfig({
                   items: [
                     {
                       text: "Chapter 3.2.1",
-                      link: "/book/chapter3.3",
+                      link: "/book/chapter3.2.1",
                     },
                   ],
                 },
