@@ -45,7 +45,7 @@ Lists come with a bunch of built-in operations, like `append`, `remove`, `revers
 
 ## Your Challenge 🤔
 
-Use a list and `walk` loop to store the user input of `Enter some text to store: ` 5 times.
+Use a list and `walk` loop to store the user input of `Enter some text to store:` 5 times.
 
 ::: details Answer
 ```
