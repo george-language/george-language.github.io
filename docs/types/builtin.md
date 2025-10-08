@@ -8,6 +8,17 @@ Unique type representing a built-in function included with the language.
 
 Built-in functions are implemented in GLang's Rust backend, meaning they are generally faster and more stable. GLang also includes a set of pre-made functions listed [here](/docs/types/function). There are 12 built-in functions total.
 
+# Operations
+
+## `isbuiltin(value)`
+Returns `true` if `value` is a built-in function.
+
+```
+bark(isfunction(bark)); # true!
+```
+
+# List of Built-Ins
+
 ## `bark(x)`
 Display a value in the terminal.
 
