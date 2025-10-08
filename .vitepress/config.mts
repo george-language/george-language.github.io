@@ -67,6 +67,15 @@ export default defineConfig({
                 { text: "Chapter 4.2", link: "/book/chapter4.2" },
               ],
             },
+            {
+              text: "Chapter 5",
+              link: "/book/chapter5",
+              items: [
+                { text: "Chapter 5.1", link: "/book/chapter5.1" },
+                { text: "Chapter 5.2", link: "/book/chapter5.2" },
+                { text: "Chapter 5.3", link: "/book/chapter5.3" },
+              ],
+            },
           ],
         },
       ],
