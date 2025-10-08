@@ -24,7 +24,7 @@ The installer will then ask step-by-step how you would like to configure where G
 ### 3. System PATH variable
 
 ::: info
-GLang 1.3 and above automatically updates the PATH on Windows. Skip this step if you’re on version 1.3+.
+GLang should automatically update the PATH variable on Windows. Skip this step if you don't encounter issues with the `glang` command not being found.
 :::
 
 As with any programming language, GLang needs to be added to the system PATH variable to work anywhere on the computer.
@@ -44,9 +44,10 @@ C:\Users\<your-username>\AppData\Local\Programs\GeorgeLanguage
 
 > If you are using an IDE or terminal to run GLang, make sure to restart it to reflect the environment changes.
 
-### 4. Done!
+### 4. Check installation
 
 GLang should now be installed properly on your Windows machine.
+
 To verify that it works, open a new terminal and run:
 
 ```
@@ -56,7 +57,7 @@ glang
 You should see something like:
 
 ```
-George Language 2.0
+George Language 0.1
 Type '/exit' to exit
 >>>
 ```
@@ -67,51 +68,22 @@ Enjoy programming now! 🎉
 
 GLang is easily installable on any macOS machine. It involves four steps:
 
-### 1. Download the ZIP
+### 1. Download the package
 
-Go to the install page of our official website to download the latest stable release.
+Go to the [install page](/docs/install/) of our official website to download the latest stable release for macOS.
 
 ::: warning
 Do **not** download suspicious versions of GLang that ask you to pay for the download.
 :::
 
-### 2. Extract the ZIP
+### 2. Run the package installer
 
-After downloading the latest version, extract the ZIP file contents into the **Applications** folder.
-This should add a folder titled `GeorgeLanguage` in Applications.
+After downloading the latest version, double click the `GeorgeLanguage+macos_setup.pkg` file to run the installer. The installer will automatically guide you through installation
 
-### 3. System PATH variable
-
-As with any programming language, GLang needs to be appended to the system PATH variable to work anywhere on the computer.
-To do this, open a terminal and edit your shell config:
-
-```bash
-sudo nano ~/.zshrc
-````
-
-If the file isn’t empty, use the arrow keys to navigate to the bottom and add:
-
-```bash
-export PATH="/Applications/GeorgeLanguage/:$PATH"
-```
-
-Then:
-
-* Press **Ctrl + X** to exit.
-* Press **Y** to save.
-* Press **Enter** to confirm.
-
-To verify if GLang has been added to the path, open a new terminal and run:
-
-```bash
-echo $PATH
-```
-
-> If you are using an IDE or terminal to run GLang, make sure to restart it to reflect the environment changes.
-
-### 4. Done!
+### 4. Check installation
 
 GLang should now be installed properly on your macOS machine.
+
 To verify that it works, open a new terminal and run:
 
 ```
@@ -121,7 +93,7 @@ glang
 You should see something like:
 
 ```
-George Language 2.0
+George Language 0.1
 Type '/exit' to exit
 >>>
 ```
