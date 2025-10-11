@@ -92,11 +92,7 @@ export default defineConfig({
           text: "Documentation",
           items: [
             { text: "Introduction", link: "/docs/" },
-            { text: "Download", link: "/docs/install/" },
-            {
-              text: "Installation Instructions",
-              link: "/docs/install/instructions",
-            },
+            { text: "Install", link: "/docs/install/" },
             {
               text: "Keywords",
               items: [
