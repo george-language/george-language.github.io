@@ -4,17 +4,15 @@ title: "Chapter 6.1"
 
 # Chapter 6.1: Errors
 
-Obviously, your program will fail at some point. Whether it's a typo, or attempting to add a number and a string, your program can (and will) fail.
+At some point, your program **will** fail. Whether it’s a missing a closing bracket, a typo, or trying to add a number to a string, errors happen.
 
-GLang won't destroy your computer if an error is encountered, instead, it safely displays the error in the terminal.
-
-The code:
+But don’t worry, GLang won’t set your computer on fire when something goes wrong. Instead, it safely reports the issue right in your terminal.
 
 ```
 1 / 0; # dividing by zero causes an error
 ```
 
-The error:
+And the output:
 
 ```sh
 error: division by zero
@@ -28,7 +26,9 @@ error: division by zero
 process finished with exit code -1
 ```
 
-GLang will pin-point exactly where the error is, and show you what part of your code failed. Additionally, there may be a `help` message to guide you along.
+GLang highlights _exactly_ where things went wrong, showing you the offending line and character.
+
+Sometimes, you’ll also get a helpful hint to steer you in the right direction:
 
 ```sh
 error: variable name 'example' is undefined
@@ -38,6 +38,6 @@ error: variable name 'example' is undefined
    | example
    | ^^^^^^^
    |
-   + - > help: you can define a variable like 'obj my_variable = 1;'
+   + --> help: you can define a variable like 'obj my_variable = 1;'
 process finished with exit code -1
 ```
