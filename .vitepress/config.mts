@@ -5,7 +5,7 @@ export default defineConfig({
   title: "George Language",
   description: "The George Programming Language",
   head: [["link", { rel: "icon", href: "./george_language_icon.svg" }]],
-  base: "/www.george-lang.org/",
+  base: "/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/george_language_icon.svg",
