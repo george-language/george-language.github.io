@@ -5,8 +5,7 @@ title: "Documentation"
 # GLang Documentation
 
 **Setup**:
-- [Download](/docs/install/)
-- [Installation Instructions](/docs/install/instructions)
+- [Install](/docs/install/)
 
 **Keywords**:
 - [`obj`](/docs/keywords/obj)
