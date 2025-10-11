@@ -14,7 +14,7 @@ try {
 }
 ```
 
-`safe` takes an `<indentifier>` as the error output, where `<indentifier>` is a string type with the encountered error inside.
+`catch` takes an `<indentifier>` as the error output, where `<indentifier>` is a string type with the encountered error inside.
 
 ```
 try {
