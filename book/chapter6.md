@@ -6,5 +6,5 @@ title: "Chapter 6"
 
 Smooth sailing from here! In this chapter, we’ll discuss:
 
-- Errors and things you may encounter while using GLang
+- Errors you may encounter
 - Graceful error handling with `try`/`catch`
