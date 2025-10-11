@@ -10,7 +10,7 @@ Think of them as little doghouses full of useful code. You can download one, and
 
 ## Installing a Kennel
 
-As of GLang **2.3+**, you can install kennels with:
+You can install kennels with:
 
 ```
 glang install <kennel_name>
@@ -38,7 +38,7 @@ They act as **global imports**, any GLang project on your system can use them.
   glang update <kennel_name>
   ```
 
-  _(GLang won’t auto-update kennels—you’re in control!)_
+  _(GLang won’t auto-update kennels; you’re in control!)_
 
 ## Using a Kennel
 
