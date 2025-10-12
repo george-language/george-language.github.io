@@ -56,3 +56,19 @@ obj my_favorite_number = 69;
 obj _____a_variable_with_a_lot_of_underscores_____ = "A lot of underscores";
 obj MY_3_FAVORITE_FOODS = ["Cake", "Pizza", "Burgers"];
 ```
+
+## Constants
+
+Additionally, there are constants. Much similar to variables, they can also store data. They store data in a non-modifyable form though, meaning we can never change a constant or it's data once it is created.
+
+```
+stay X = 10;
+
+X = 20; # this line causes an error
+```
+
+It is preferred to keep a constant's name fully uppercase, as they are best used for values you use everywhere in your program.
+
+```
+stay MAX_STORAGE_AMOUNT = 240; # this way, 'MAX_STORAGE_AMOUNT' stands out from 'max_storage_amount'
+```
