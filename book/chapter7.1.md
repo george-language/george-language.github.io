@@ -39,3 +39,32 @@ fetch filename + extension;
 
 bark(x);
 ```
+
+Imports are also relative to the file they’re written in.
+
+That means when you `fetch` another module, the path you give is based on the current file’s location, not where the program is run from.
+
+Let’s say you have this project setup:
+
+```
+example/
+│
+├── src/
+│   ├── example1.glang
+│   └── example2.glang
+```
+
+If you’re working inside `example1.glang` and want to use code from `example2.glang`, you’d write:
+
+```
+fetch "example2.glang";
+```
+
+Because both files live in the same folder (`src/`), the path doesn’t need anything fancy, just the filename.
+
+But if you need to reach up or down the folder tree, you can use `../` and folder names just like normal file paths:
+
+```
+fetch "../shared/helpers.glang";   # go up one folder, into shared/
+fetch "utils/math.glang";          # go down into a subfolder
+```
