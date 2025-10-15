@@ -4,7 +4,7 @@ title: "Chapter 6.2"
 
 # Chapter 6.2: Handling Errors
 
-Sometimes, programmers want to **bypass** errors because they expect them to happen. That’s perfectly fine, some operations, like reading a file or taking the square root of a negative number, are naturally prone to failure.
+Programmers often want to **bypass** errors because they expect them to happen. That’s perfectly fine, some operations, like reading a file or taking the square root of a negative number, are naturally prone to failure.
 
 GLang provides a safe way to handle these situations using `try` and `catch`.
 

@@ -26,6 +26,8 @@ error: division by zero
 process finished with exit code -1
 ```
 
+## What The Error Says
+
 GLang highlights _exactly_ where things went wrong, showing you the offending line and character.
 
 Sometimes, you’ll also get a helpful hint to steer you in the right direction:

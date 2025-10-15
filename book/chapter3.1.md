@@ -6,7 +6,7 @@ title: "Chapter 3.1"
 
 ## Conditions
 
-It is very common that programmers use conditions in their code. Conditions are a way to execute some amount of code if something meets a certain criteria. The `if` statement is a great example of that.
+It is very common that programmers use conditions in their code. Conditions are a way to execute code if something meets a certain criteria. The `if` statement is a great example.
 
 ```
 obj x = 10;
@@ -25,7 +25,7 @@ if x == 10 { # '==' is a operator to check if something equals another value
 - `>=` compares two values to see if one is greater than or equal to another
 - `<=` compares two values to see if one is less than or equal to another
 
-The `if` statement takes a comparison (often called an expression) to determine if the value is true or false. If true, run the code, otherwise continue.
+The `if` statement takes a comparison (often called an expression) to determine if the value is true or false. If true, run the code, otherwise ignore and continue.
 
 ```
 obj x = 10;
@@ -35,7 +35,7 @@ if x != 20 {
 }
 ```
 
-You might also want to do something otherwise if the first `if` statement fails. That can be done with the `otherwise` statement, following a `if` statement.
+You might also want to run code if the first `if` statement fails. That can be done with the `otherwise` statement, following a `if` statement.
 
 ```
 obj x = 10;
@@ -47,7 +47,7 @@ if x == 11 {
 }
 ```
 
-`otherwise` is often thought of as the "default" case. If any comparisons above are not true, `otherwise` will run. That means we can sandwich `alsoif` statements between to create **control flow** for our program!
+`otherwise` is often thought of as the "default" case. If any comparisons above are not true, `otherwise` will run. That means we can sandwich `alsoif` statements between to create proper **control flow** for our program!
 
 ```
 obj x = 10;

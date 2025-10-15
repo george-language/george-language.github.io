@@ -6,9 +6,9 @@ title: "Chapter 1.3"
 
 ## Initial Steps
 
-Before we do anything, let's keep organized! Make a directory specifically for this book, maybe `glang_learning` and move into it. Create a file titled "main.glang" and open it in an IDE or text editor.
+Before we do anything, let's keep organized! Make a directory specifically for this book, maybe `glang_learning` and move into it. Create a file titled `main.glang` and open it in an IDE or text editor.
 
-For the record, `.glang` files can be any name. GLang has the ability to run any program with the `.glang` extension.
+_For the record, `.glang` files can be any name. GLang has the ability to run any program with the `.glang` extension._
 
 ## Writing The Code
 
@@ -28,7 +28,7 @@ That's it! You should see `Hello, World!` inside the terminal. Congrats on writi
 
 ## Your Challenge 🤔
 
-Modify the `Hello, World!` inside quotation marks (`""`) to display the message Learning to code is easy! inside the terminal.
+Modify the `Hello, World!` inside quotation marks (`""`) to display the message `Learning to code is easy!` inside the terminal.
 
 ::: details Answer
 ```

@@ -15,7 +15,9 @@ obj first_char = charat(my_string, 0); # '1'
 
 ## String Operations
 
-The string type actually doesn't have the ability to modify in place; i.e. it is **immutable**. For most string operations, you actually create a new copy that can be assigned to something. Reversing a string is a great example, as the string is copied, then recreated in reverse.
+The string type actually doesn't have the ability to modify in place; i.e. it is **immutable**. For most string operations, you actually create a new copy that can be assigned to something.
+
+Reversing a string is a great example, as the string is copied, then recreated in reverse.
 
 ```
 obj forwards = "abcd";
@@ -31,4 +33,4 @@ obj excited_happy_birthday = "Happy Birthday!" * 3; # 'Happy Birthday!Happy Birt
 
 ## Other String Operations
 
-Just like lists, strings come with a bunch of built-in operations other than the ones listed here. A full list of available operations is in the [String Documentation](/docs/types/string#operations).
+Just like lists, strings come with a bunch of built-in operations other than the ones listed here. A full list of available operations is in the [string documentation](/docs/types/string#operations).

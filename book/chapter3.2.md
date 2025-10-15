@@ -6,16 +6,13 @@ title: "Chapter 3.2"
 
 ## Loops
 
-When you need to run a block of code multiple times, you use a **loop**.
-
-Loops let your program “cycle” through code, whether that’s repeating an action _x_ number of times or continuing until a condition changes.
+When you need to run a block of code multiple times, you use a **loop**. Loops let your program “cycle” through code, whether that’s repeating an action _x_ number of times or continuing until a condition changes.
 
 GLang gives you two main ways to loop: `while` and `walk`.
 
 ## `while`
 
-A `while` loop is basically an `if` statement that keeps running **while** a condition remains true.
-If that condition never becomes false, your loop will run forever (and probably melt your computer’s hardware).
+A `while` loop is basically an `if` statement that keeps running **while** a condition remains true. If that condition never becomes false, your loop will run forever (and probably melt your computer’s hardware!)
 
 ```
 while true {
@@ -70,7 +67,7 @@ walk i = 0 through 10 step = 2 {
 
 ## Your Challenge 🤔
 
-Use a `walk` loop to output numbers 0 - 10000 counting by 100s (0, 100, 200, etc.)
+Use a `walk` loop to output numbers 0 through 10000 counting by 100s (0, 100, 200, etc.)
 
 ::: details Answer
 ```

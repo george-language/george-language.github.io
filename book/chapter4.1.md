@@ -49,11 +49,9 @@ bark(return_value("Hello, world!"));  # outputs 'Hello, world!'
 
 ## Function Calls
 
-Once a function is defined, it won’t run until you **call** it.
+Once a function is defined, it won’t run until you **call** it. To call a function, use its name followed by parentheses `()` and include arguments if the function expects them.
 
-To call a function, use its name followed by parentheses `()` and include arguments if the function expects them.
-
-If it doesn’t take any arguments, just call it with empty parentheses.
+_If it doesn’t take any arguments, just call it with empty parentheses._
 
 ```
 func my_function(x) {

@@ -16,7 +16,7 @@ There are three primary types in GLang, **number**, **string**, and **list**. Th
 
 The string type may be a little confusing, but its actually a collection of characters (a.k.a. a string of characters)
 
-We can actually use this to store text of any length - from your favorite quote to an 8 page essay, the string type can hold it.
+We can use this to store text of any length - from your favorite quote to an 8 page essay, the string type can hold it.
 
 ```
 "This is a string of text. We can add emojis 😼, special characters !#@$^#, and even other languages 你好."
@@ -32,7 +32,7 @@ We'll talk a bit more specially on this type later on, but for now, think of it 
 
 ## Variables
 
-The most important part of programming is storing data for later. Programmers often do this by creating a variable; a named object stored in memory pointing to the type we created.
+The most important part of programming is storing data for later. Programmers often do this by creating a variable; a named object stored in memory.
 
 ```
 obj x = 10;
@@ -46,7 +46,7 @@ To change a variable’s value, just assign a new value to it (without `obj`)
 x = 20;
 ```
 
-The cool thing about variables is the ability to name them other things than `x`. Variable names can:
+The cool thing about variables are their ability to have names other than `x`. Variable names can:
 
 - contain letters, numbers, and underscores
 - not contain spaces or special symbols (like ! or $)
@@ -59,7 +59,7 @@ obj MY_3_FAVORITE_FOODS = ["Cake", "Pizza", "Burgers"];
 
 ## Constants
 
-Additionally, there are constants. Much similar to variables, they can also store data. They store data in a non-modifyable form though, meaning we can never change a constant or it's data once it is created.
+Additionally, there are constants. Much similar to variables, they can also store data, however, they store data in a non-modifyable form. This means we can never change a constant or it's data once it is created.
 
 ```
 stay X = 10;

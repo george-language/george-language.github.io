@@ -4,11 +4,11 @@ title: "Chapter 4.2"
 
 # Chapter 4.2: Scope
 
-When you create variables or functions, they don’t always live *everywhere* in your program. Where something “lives” and can be accessed from is called its **scope**.
+When you create variables or functions, they don’t always live _everywhere_ in your program. Where something “lives” and can be accessed from is called its **scope**.
 
 You can think of scope like a neighborhood:
 
-If a variable is defined inside one neighborhood (a function), it can’t just walk into another one unless it’s allowed.
+> If a variable is defined inside one neighborhood (a function), it can’t just walk into another one unless it’s allowed.
 
 ```
 func say_hi() {
@@ -69,8 +69,7 @@ func show_mood() {
 show_mood();  # outputs "Happy"
 ```
 
-If you redefine a variable with the same name **inside** a function,
-the inner one hides (or **shadows**) the global one, modifying it:
+If you redefine a variable with the same name **inside** a function, the inner one hides (or **shadows**) the global one, modifying it:
 
 ```
 obj mood = "Happy";
@@ -93,7 +92,7 @@ func outer() {
     obj outer_value = "Outside";
 
     func inner() {
-        bark(outer_value);  # ✅ can see outer_value
+        bark(outer_value);  # can see outer_value
     }
 
     inner();

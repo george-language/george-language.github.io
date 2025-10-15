@@ -41,7 +41,7 @@ obj first_element = retrieve(list_with_four_elements, 0); # retrieves 1
 
 ## Other List Operations
 
-Lists come with a bunch of built-in operations, like `append`, `remove`, `reverse`, and more that make them super powerful for managing data. A full list of available operations is in the [List Documentation](/docs/types/list#operations).
+Lists come with a bunch of built-in operations, like `append`, `remove`, `reverse`, and more that make them super powerful for managing data. A full list of available operations is in the [list documentation](/docs/types/list#operations).
 
 ## Your Challenge 🤔
 
