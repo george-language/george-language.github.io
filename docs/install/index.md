@@ -10,7 +10,7 @@ title: "Install"
 
 _Beta or previous versions are available [here](https://github.com/george-language/glang/releases)._
 
-## Post-Install Notes
+## Pre-Install Notes
 Upon installing, GLang requires ~5 MB of space. As far as computer power goes, that's up to you! It's optimized to run well even on low-end laptops.
 
 ## Install Instructions
@@ -35,7 +35,7 @@ Type '/exit' to exit
 >>>
 ```
 
-## After-Install Notes
+## Post-Install Notes
 GLang includes a set of tools you can use, like `glang self <option>` to manage the GLang binary and components.
 
 Updating to the latest version is as simple as:
