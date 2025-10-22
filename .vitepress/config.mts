@@ -50,6 +50,14 @@ const glang = {
         },
       ],
     },
+    operators: {
+      patterns: [
+        {
+          name: "entity.name.glang",
+          match: /==|!=|<=|>=|<|>|\+|-|\*|\/|%|=|true|false|null/,
+        },
+      ],
+    },
   },
 };
 
