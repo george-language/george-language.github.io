@@ -54,7 +54,7 @@ const glang = {
       patterns: [
         {
           name: "constant.numeric.glang",
-          match: /==|!=|<=|>=|<|>|\+|-|\*|\/|%|\^|=|true|false|null/,
+          match: /true|false|null/,
         },
       ],
     },
