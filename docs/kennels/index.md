@@ -12,7 +12,7 @@ Think of them as little doghouses full of useful code. You can download one, and
 
 You can install kennels with:
 
-```
+```sh
 glang install <kennel_name>
 ```
 
@@ -28,13 +28,13 @@ They act as **global imports**, any GLang project on your system can use them.
 
 - **Remove a kennel:**
 
-  ```
+  ```sh
   glang remove <kennel_name>
   ```
 
 - **Update a kennel:**
 
-  ```
+  ```sh
   glang update <kennel_name>
   ```
 
@@ -44,7 +44,7 @@ They act as **global imports**, any GLang project on your system can use them.
 
 When you install a kennel, GLang gives it an **Easy Import Identifier (EII)**, usually the same as the kennel’s name.
 
-```
+```glang
 fetch kennel_name;
 
 kennels_function();

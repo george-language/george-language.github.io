@@ -10,13 +10,13 @@ Remember our "Hello, World!" program? That is the output resulting from our prog
 
 GLang allows you to display your program's output right inside of the terminal, with the `bark` function. Functions will be touched on in later chapters, but for now, remember them as little blocks of code we can execute by **calling** them.
 
-```
+```glang
 bark(1 + 1);
 ```
 
 Here, we call the `bark` function to display the result of `1 + 1`, in the terminal, you'll see `2`. `bark` can take any piece of code and display it in the terminal, like a variable named `y` with the contents of a string.
 
-```
+```glang
 obj y = "This is some string.";
 
 bark(y);
@@ -30,7 +30,7 @@ Input is another very important concept every programmer should know. It's how y
 
 GLang allows you to get input from the terminal with the `chew` function. `chew` will take a prompt, e.g. `"Enter your name: "`, and give you what the user entered as a string.
 
-```
+```glang
 obj x = chew("Enter your name: ");
 
 bark(x);

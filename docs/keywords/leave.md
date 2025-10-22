@@ -6,7 +6,7 @@ title: "leave"
 
 Stop a [walk](/docs/keywords/walk) or [while](/docs/keywords/while) loop.
 
-```
+```glang
 walk i = 0 through 10 {
     if i == 5 {
         leave; # stops the loop entirely and exits

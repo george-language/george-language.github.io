@@ -6,7 +6,7 @@ title: "alsoif"
 
 Execute code if another condition is met (used in chain with if statements.)
 
-```
+```glang
 obj x = tonumber(chew("Enter a number: "));
 
 if x == 1 {

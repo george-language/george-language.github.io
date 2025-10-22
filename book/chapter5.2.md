@@ -8,7 +8,7 @@ A string is also considered a collection, due to the fact it is a **collection o
 
 We can perform many string operations (similar to lists) like indexing, reversing, and even joining!
 
-```
+```glang
 obj my_string = "12345";
 obj first_char = charat(my_string, 0); # '1'
 ```
@@ -19,14 +19,14 @@ The string type actually doesn't have the ability to modify in place; i.e. it is
 
 Reversing a string is a great example, as the string is copied, then recreated in reverse.
 
-```
+```glang
 obj forwards = "abcd";
 obj backwards = reverse(forwards); # 'dcba'
 ```
 
 Strings support some mathematical operands too. The `+` operand adds two strings together, and you can even use the `*` operator to multiply a string.
 
-```
+```glang
 obj hello_world = "Hello, " + "world!"; # 'Hello, world!'
 obj excited_happy_birthday = "Happy Birthday!" * 3; # 'Happy Birthday!Happy Birthday!Happy Birthday!'
 ```

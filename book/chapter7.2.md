@@ -10,7 +10,7 @@ Imagine we’re building something large, like a system that controls an oven. I
 
 Take this example:
 
-```
+```glang
 # Oven logic by John Doe
 
 stay MAX_TEMP = 500;
@@ -63,7 +63,7 @@ This way, each file has a clear purpose.
 **`main.glang`**
 This is the control center of the program. It brings everything together and runs the main oven logic.
 
-```
+```glang
 fetch "src/temp.glang";
 fetch "src/time.glang";
 
@@ -86,7 +86,7 @@ while true {
 **`src/temp.glang`**
 Handles everything related to temperature: getting and setting the current oven temp, and making sure it doesn’t exceed the max.
 
-```
+```glang
 stay MAX_TEMP = 500;
 obj current_temperature = 0;
 
@@ -106,7 +106,7 @@ func set_temp(temp) {
 **`src/time.glang`**
 A simple module that focuses solely on the timer logic.
 
-```
+```glang
 func set_timer(time) {
     walk i = 0 through time {
         bark("cooking");

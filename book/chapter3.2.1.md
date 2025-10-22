@@ -10,7 +10,7 @@ In the last chapter, we explored `walk` and `while` loops and how to create them
 
 If you want to skip to the next part of a loop (next iteration), you can use the `next` keyword anywhere in a `walk` or `while` loop.
 
-```
+```glang
 # walk
 walk i = 0 through 10 {
     if i == 5 {
@@ -36,7 +36,7 @@ while x != 10 {
 
 If you want to stop a loop, you can use the `leave` keyword anywhere in a `walk` or `while` loop.
 
-```
+```glang
 # walk
 walk i = 0 through 10 {
     if i == 5 {

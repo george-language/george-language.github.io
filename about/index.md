@@ -33,7 +33,7 @@ endbody
 
 Fast forward to **May 2025**, when a full **Rust rewrite** began under **MP Software** (now retired). The rewrite brought semicolons, braces, and a cleaner, more expressive syntax.
 
-```
+```glang
 func y(arg1) {
     give arg1 + 1;
 }
@@ -48,7 +48,7 @@ walk i = 0 through 10 {
 
 This was also when **bootstrapping** entered the picture. Large parts of GLang (like the standard library) started being written _in GLang itself_. Pretty wild.
 
-```
+```glang
 fetch std_os;
 
 bark(os_type()); # implemented in glang!

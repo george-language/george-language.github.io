@@ -20,13 +20,13 @@ For this chapter, we’ll use a kennel called `fancy-terminal`, it gives you eas
 
 First, make sure you’ve installed the kennel:
 
-```
+```sh
 glang install fancy-terminal
 ```
 
 Then import it into your program:
 
-```
+```glang
 fetch fancy_terminal; # enables color and style support
 
 bark(GREEN + "All systems ok." + RESET);
@@ -44,7 +44,7 @@ Now that you’ve got `fancy-terminal` installed, you can make your bank’s mes
 
 For example, in **`system.glang`**, you can highlight error messages in red:
 
-```
+```glang
 # system.glang
 # ...
 

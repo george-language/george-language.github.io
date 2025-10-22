@@ -6,7 +6,7 @@ title: "Chapter 7.1"
 
 As your program grows (we’re talking hundreds or even thousands of lines), keeping everything in one file can get _messy_. That’s why programmers love to break their code into smaller, organized pieces called **modules**.
 
-```
+```glang
 fetch "path/to/my/module.glang";
 ```
 
@@ -16,12 +16,12 @@ A module is just another file that contains code you can reuse elsewhere. Think 
 
 In GLang, you can use the `fetch` keyword to import everything from a module location. Once imported, anything defined inside that file becomes available to the current one.
 
-```
+```glang
 # module.glang
 obj x = 10;
 ```
 
-```
+```glang
 # main.glang
 fetch "module.glang";
 
@@ -30,7 +30,7 @@ bark(x); # outputs 10
 
 Because `fetch` expects a string, you can even build the path dynamically using string expressions.
 
-```
+```glang
 # main.glang
 obj extension = ".glang";
 obj filename = "module";
@@ -56,7 +56,7 @@ example/
 
 If you’re working inside `example1.glang` and want to use code from `example2.glang`, you’d write:
 
-```
+```glang
 fetch "example2.glang";
 ```
 
@@ -64,7 +64,7 @@ Because both files live in the same folder (`src/`), the path doesn’t need any
 
 If you need to reach up or down the folder tree, you can use `../` and folder names just like normal file paths:
 
-```
+```glang
 fetch "../shared/helpers.glang";   # go up one folder, into shared/
 fetch "utils/math.glang";          # go down into a subfolder
 ```

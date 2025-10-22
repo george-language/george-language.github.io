@@ -8,7 +8,7 @@ At some point, your program **will** fail. Whether it’s a missing a closing br
 
 But don’t worry, GLang won’t set your computer on fire when something goes wrong. Instead, it safely reports the issue right in your terminal.
 
-```
+```glang
 1 / 0; # dividing by zero causes an error
 ```
 
@@ -52,7 +52,7 @@ Sometimes, multiple errors appear at once. This is called a **traceback**. A tra
 
 For example, consider the `push` function:
 
-```
+```glang
 push("", "");
 ```
 

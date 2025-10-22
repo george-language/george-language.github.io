@@ -8,7 +8,7 @@ title: "Chapter 3.1"
 
 It is very common that programmers use conditions in their code. Conditions are a way to execute code if something meets a certain criteria. The `if` statement is a great example.
 
-```
+```glang
 obj x = 10;
 
 if x == 10 { # '==' is a operator to check if something equals another value
@@ -27,7 +27,7 @@ if x == 10 { # '==' is a operator to check if something equals another value
 
 The `if` statement takes a comparison (often called an expression) to determine if the value is true or false. If true, run the code, otherwise ignore and continue.
 
-```
+```glang
 obj x = 10;
 
 if x != 20 {
@@ -37,7 +37,7 @@ if x != 20 {
 
 You might also want to run code if the first `if` statement fails. That can be done with the `otherwise` statement, following a `if` statement.
 
-```
+```glang
 obj x = 10;
 
 if x == 11 {
@@ -49,7 +49,7 @@ if x == 11 {
 
 `otherwise` is often thought of as the "default" case. If any comparisons above are not true, `otherwise` will run. That means we can sandwich `alsoif` statements between to create proper **control flow** for our program!
 
-```
+```glang
 obj x = 10;
 
 if x == 0 {
@@ -68,7 +68,7 @@ if x == 0 {
 Use an `if` statement to determine if `x` is greater than or equal to 10, then output the message `"Control flow is easy!"`
 
 ::: details Answer
-```
+```glang
 obj x = 10;
 
 if x >= 10 {

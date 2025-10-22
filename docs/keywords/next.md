@@ -6,7 +6,7 @@ title: "next"
 
 Skip to the next iteration of a [walk](/docs/keywords/walk) or [while](/docs/keywords/while) loop.
 
-```
+```glang
 walk i = 0 through 10 {
     if i == 5 {
         next; # skips to the next iteration

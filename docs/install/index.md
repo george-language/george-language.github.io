@@ -23,7 +23,7 @@ Double click the `.exe` to open a setup dialog allowing you to configure install
 
 Once GLang is installed, confirm everything works by opening a new terminal and typing:
 
-```
+```sh
 glang
 ```
 

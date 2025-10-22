@@ -8,7 +8,7 @@ Programmers often want to **bypass** errors because they expect them to happen. 
 
 GLang provides a safe way to handle these situations using `try` and `catch`.
 
-```
+```glang
 try {
     1 / 0; # error!
 } catch error {
@@ -20,7 +20,7 @@ In this example, the `try` block runs first. If an error occurs, GLang automatic
 
 When this code runs, you’ll see something like:
 
-```
+```sh
 Some error occurred: division by zero
 ```
 
@@ -31,7 +31,7 @@ After handling the error, the program continues running normally. In essence, `t
 Use `try` and `catch` to attempt to access an undefined variable named `y`. Define the variable with the value 10 if it fails to access it.
 
 ::: details Answer
-```
+```glang
 try {
     y;
 } catch error {

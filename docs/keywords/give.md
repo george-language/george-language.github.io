@@ -6,7 +6,7 @@ title: "give"
 
 Return a value from a statement.
 
-```
+```glang
 func example() {
     give true;
 }

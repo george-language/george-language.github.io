@@ -6,7 +6,7 @@ title: "catch"
 
 Represents the safe block of code to execute after a `try` block fails. _Used in chain with the [`try` keyword](/docs/keywords/try)._
 
-```
+```glang
 try {
     # ...
 } safe error {
@@ -16,7 +16,7 @@ try {
 
 `catch` takes an `<indentifier>` as the error output, where `<indentifier>` is a string type with the encountered error inside.
 
-```
+```glang
 try {
     1 / 0;
 } catch division_error {

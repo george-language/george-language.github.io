@@ -14,7 +14,7 @@ GLang gives you two main ways to loop: `while` and `walk`.
 
 A `while` loop is basically an `if` statement that keeps running **while** a condition remains true. If that condition never becomes false, your loop will run forever (and probably melt your computer’s hardware!)
 
-```
+```glang
 while true {
     bark("This loop runs forever!!!");
 }
@@ -22,7 +22,7 @@ while true {
 
 Of course, infinite loops aren’t always bad, sometimes you want your program to keep running until something happens. For example, you might want to increment a value until it hits a goal.
 
-```
+```glang
 obj x = 0;
 
 while x != 100 {  # stops when x == 100
@@ -32,7 +32,7 @@ while x != 100 {  # stops when x == 100
 
 A classic example is a game loop that runs while the game is active:
 
-```
+```glang
 while game_is_running() {
     render_opponent();
     render_player();
@@ -43,7 +43,7 @@ while game_is_running() {
 
 The `walk` loop gives you more **control**. Instead of looping until some condition changes, you define exactly how many times it should run.
 
-```
+```glang
 walk i = 0 through 10 {
     bark(i);
 }
@@ -59,7 +59,7 @@ So this prints: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
 
 You can also control how much `i` increases each time with the optional `step` keyword:
 
-```
+```glang
 walk i = 0 through 10 step = 2 {
     bark(i); # outputs 0, 2, 4, 6, 8
 }
@@ -70,7 +70,7 @@ walk i = 0 through 10 step = 2 {
 Use a `walk` loop to output numbers 0 through 10000 counting by 100s (0, 100, 200, etc.)
 
 ::: details Answer
-```
+```glang
 walk i = 0 through 10000 step = 100 {
     bark(i);
 }

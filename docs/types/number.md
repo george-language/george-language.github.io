@@ -6,7 +6,7 @@ title: "number"
 
 Primitive data type that represents any numerical value.
 
-```
+```glang
 obj x = 10; # whole
 obj y = 10.0; # decimal
 ```
@@ -18,7 +18,7 @@ Each number is stored as a 64 bit floating point, meaning the number type can be
 ## `isnumber(value)`
 Returns `true` if `value` is a number.
 
-```
+```glang
 obj x = 10;
 
 bark(isnumber(x)); # true!
@@ -27,7 +27,7 @@ bark(isnumber(x)); # true!
 ## `isdecimal(num)`
 Returns `true` if `num` has a decimal place.
 
-```
+```glang
 obj x = 1.1;
 
 bark(isdecimal(x)); # true!

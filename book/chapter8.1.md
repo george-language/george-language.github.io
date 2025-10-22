@@ -30,7 +30,7 @@ Here’s what each file will do:
 
 This file is the foundation of our system. It defines how accounts are **stored**, **checked**, and **added** to the registry.
 
-```
+```glang
 fetch std_hashmap;
 fetch std_format;
 
@@ -59,7 +59,7 @@ func add_account(accounts, name, balance) {
 
 Now that we can store and find accounts, it’s time to handle **transactions** like deposits and withdrawals.
 
-```
+```glang
 fetch std_hashmap;
 fetch std_format;
 fetch "account.glang"; # We need 'account_exists' from the account file.
@@ -98,7 +98,7 @@ Now comes the fun part; making the system *interactive*!
 
 This file ties everything together, allowing a user to create accounts, deposit or withdraw money, and view balances.
 
-```
+```glang
 fetch std_hashmap;
 fetch std_format;
 fetch "src/account.glang";

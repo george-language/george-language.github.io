@@ -10,7 +10,7 @@ GLang gives you the option to store data in the form of a type. This data can be
 
 There are three primary types in GLang, **number**, **string**, and **list**. The number type is hinted by the name, a number.
 
-```
+```glang
 10
 ```
 
@@ -18,13 +18,13 @@ The string type may be a little confusing, but its actually a collection of char
 
 We can use this to store text of any length - from your favorite quote to an 8 page essay, the string type can hold it.
 
-```
+```glang
 "This is a string of text. We can add emojis 😼, special characters !#@$^#, and even other languages 你好."
 ```
 
 Lastly there's the list type, an infinitely grow-able "storage container" of items. The list type can hold every other type, multiples of it, and even itself.
 
-```
+```glang
 [1, 2, 3, 4, 5]
 ```
 
@@ -34,7 +34,7 @@ We'll talk a bit more specially on this type later on, but for now, think of it 
 
 The most important part of programming is storing data for later. Programmers often do this by creating a variable; a named object stored in memory.
 
-```
+```glang
 obj x = 10;
 ```
 
@@ -42,7 +42,7 @@ Here, we use the word `obj` to tell GLang we are creating a variable (object). W
 
 To change a variable’s value, just assign a new value to it (without `obj`)
 
-```
+```glang
 x = 20;
 ```
 
@@ -51,7 +51,7 @@ The cool thing about variables are their ability to have names other than `x`. V
 - contain letters, numbers, and underscores
 - not contain spaces or special symbols (like ! or $)
 
-```
+```glang
 obj my_favorite_number = 69;
 obj _____a_variable_with_a_lot_of_underscores_____ = "A lot of underscores";
 obj MY_3_FAVORITE_FOODS = ["Cake", "Pizza", "Burgers"];
@@ -61,7 +61,7 @@ obj MY_3_FAVORITE_FOODS = ["Cake", "Pizza", "Burgers"];
 
 Additionally, there are constants. Much similar to variables, they can also store data, however, they store data in a non-modifyable form. This means we can never change a constant or it's data once it is created.
 
-```
+```glang
 stay X = 10;
 
 X = 20; # this line causes an error
@@ -69,6 +69,6 @@ X = 20; # this line causes an error
 
 It is preferred to keep a constant's name fully uppercase, as they are best used for values you use everywhere in your program.
 
-```
+```glang
 stay MAX_STORAGE_AMOUNT = 240; # this way, 'MAX_STORAGE_AMOUNT' stands out from 'max_storage_amount'
 ```

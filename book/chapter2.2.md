@@ -14,7 +14,7 @@ GLang gives you a set of operators to perform these operations on numerical valu
 
 The plus sign (+) will add two values together.
 
-```
+```glang
 obj x = 1 + 1; # x is 2
 ```
 
@@ -22,7 +22,7 @@ obj x = 1 + 1; # x is 2
 
 The minus sign (-) will subtract two values from each other.
 
-```
+```glang
 obj x = 2 - 1; # x is 1
 ```
 
@@ -30,7 +30,7 @@ obj x = 2 - 1; # x is 1
 
 The star sign (*) will multiply two values by each other.
 
-```
+```glang
 obj x = 2 * 2; # x is 4
 ```
 
@@ -38,7 +38,7 @@ obj x = 2 * 2; # x is 4
 
 The forward slash (/) will divide two values by each other.
 
-```
+```glang
 obj x = 8 / 2; # x is 4
 ```
 
@@ -46,7 +46,7 @@ obj x = 8 / 2; # x is 4
 
 The carrot sign (^) will power two values by each other.
 
-```
+```glang
 obj x = 10 ^ 2; # x is 100
 ```
 
@@ -54,7 +54,7 @@ obj x = 10 ^ 2; # x is 100
 
 The percent sign (%) will give you the remainder after dividing two numbers.
 
-```
+```glang
 obj x = 10 % 3; # x is 1
 ```
 
@@ -62,7 +62,7 @@ obj x = 10 % 3; # x is 1
 
 Combining operators, we can additionally use parenthesis to perform math expressions. If you are familiar with basic math, you may remember PEMDAS. GLang, being a programmatic calculator, implements PEMDAS to the core.
 
-```
+```glang
 obj x = 2 * (2 + 2); # x is 8
 ```
 
@@ -71,7 +71,7 @@ obj x = 2 * (2 + 2); # x is 8
 Use GLang's math operators to define a variable named math_is_easy with the value of 1000.
 
 ::: details Answer
-```
+```glang
 obj math_is_easy = 10 ^ 3;
 ```
 :::

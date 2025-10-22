@@ -14,13 +14,13 @@ _For the record, `.glang` files can be any name. GLang has the ability to run an
 
 Inside the `main.glang` file, we are going to write the following (you may not understand it, but that's ok!):
 
-```
+```glang
 bark("Hello, World!");
 ```
 
 Save this file and open the terminal in the same directory as the `main.glang` file (use the `cd` command, or right click > open terminal in that directory). To run this file, we type the following:
 
-```
+```sh
 glang main.glang
 ```
 
@@ -31,7 +31,7 @@ That's it! You should see `Hello, World!` inside the terminal. Congrats on writi
 Modify the `Hello, World!` inside quotation marks (`""`) to display the message `Learning to code is easy!` inside the terminal.
 
 ::: details Answer
-```
+```glang
 bark("Learning to code is easy!");
 ```
 :::
