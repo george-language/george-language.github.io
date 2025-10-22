@@ -30,7 +30,7 @@ while x != 100 {  # stops when x == 100
 }
 ```
 
-A classic example is a game loop that runs while the game is active:
+A classic example may be a game loop that runs while the game is active:
 
 ```glang
 while game_is_running() {
@@ -55,7 +55,7 @@ Here’s what happens:
 - The loop runs while `i` is less than 10
 - Each time through, `i` increases by 1 automatically
 
-So this prints: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
+Therefore, this outputs: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
 
 You can also control how much `i` increases each time with the optional `step` keyword:
 
@@ -67,7 +67,7 @@ walk i = 0 through 10 step = 2 {
 
 ## Your Challenge 🤔
 
-Use a `walk` loop to output numbers 0 through 10000 counting by 100s (0, 100, 200, etc.)
+Use a `walk` loop to output numbers 0 through 10000 counting by 100s (0, 100, 200, and so on...)
 
 ::: details Answer
 ```glang
