@@ -11,7 +11,6 @@ const glang = {
     { include: "#numbers" },
     { include: "#functions" },
     { include: "#operators" },
-    { include: "#objects" },
   ],
   repository: {
     comments: {
@@ -24,7 +23,6 @@ const glang = {
           match:
             "\\b(fetch|not|and|or|try|catch|next|walk|through|if|alsoif|otherwise|obj|stay|step|while|leave|func|give)\\b",
         },
-        { name: "storage.type.object.glang", match: "\\bobj\\b" },
       ],
     },
     strings: {
@@ -48,19 +46,8 @@ const glang = {
       patterns: [
         {
           name: "entity.name.function.glang",
-          match:
-            "\\b(bark|chew|dig|bury|copy|tostring|tonumber|length|uhoh|type|run|)\\b(?=\\()",
+          match: "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\()",
         },
-      ],
-    },
-    operators: {
-      patterns: [
-        { name: "keyword.operator.glang", match: "(==|=|\\+|\\-|\\*|\\/)" },
-      ],
-    },
-    objects: {
-      patterns: [
-        { name: "variable.other.glang", match: "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b" },
       ],
     },
   },
