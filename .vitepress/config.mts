@@ -1,4 +1,75 @@
 import { defineConfig } from "vitepress";
+import { createHighlighter } from "shiki";
+
+const glang = {
+  name: "glang",
+  scopeName: "source.glang",
+  patterns: [
+    { include: "#comments" },
+    { include: "#keywords" },
+    { include: "#strings" },
+    { include: "#numbers" },
+    { include: "#functions" },
+    { include: "#operators" },
+    { include: "#objects" },
+  ],
+  repository: {
+    comments: {
+      patterns: [{ name: "comment.line.number-sign.glang", match: "#.*$" }],
+    },
+    keywords: {
+      patterns: [
+        {
+          name: "keyword.control.glang",
+          match:
+            "\\b(fetch|not|and|or|try|catch|next|walk|through|if|alsoif|otherwise|obj|stay|step|while|leave|func|give)\\b",
+        },
+        { name: "storage.type.object.glang", match: "\\bobj\\b" },
+      ],
+    },
+    strings: {
+      patterns: [
+        {
+          name: "string.quoted.double.glang",
+          begin: '"',
+          end: '"',
+          patterns: [
+            { name: "constant.character.escape.glang", match: "\\\\." },
+          ],
+        },
+      ],
+    },
+    numbers: {
+      patterns: [
+        { name: "constant.numeric.glang", match: "\\b\\d+(?:\\.\\d+)?\\b" },
+      ],
+    },
+    functions: {
+      patterns: [
+        {
+          name: "entity.name.function.glang",
+          match:
+            "\\b(bark|chew|dig|bury|copy|tostring|tonumber|length|uhoh|type|run|)\\b(?=\\()",
+        },
+      ],
+    },
+    operators: {
+      patterns: [
+        { name: "keyword.operator.glang", match: "(==|=|\\+|\\-|\\*|\\/)" },
+      ],
+    },
+    objects: {
+      patterns: [
+        { name: "variable.other.glang", match: "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b" },
+      ],
+    },
+  },
+};
+
+const highlighter = await createHighlighter({
+  langs: [glang, "sh", "toml"],
+  themes: ["github-dark-dimmed"],
+});
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -183,5 +254,14 @@ export default defineConfig({
         'George Language is licensed under the GPL v3 openly. <a href="https://github.com/george-language/george-language.github.io">Help improve this site.</a>',
       copyright: "Copyright (©) The George Language Foundation",
     },
+  },
+  markdown: {
+    highlight: (code, lang, attrs) => {
+      return highlighter.codeToHtml(code, {
+        lang: lang,
+        theme: "github-dark-dimmed",
+      });
+    },
+    languageAlias: { glang: "glang" },
   },
 });
