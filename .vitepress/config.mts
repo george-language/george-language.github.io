@@ -53,8 +53,8 @@ const glang = {
     operators: {
       patterns: [
         {
-          name: "entity.name.glang",
-          match: /==|!=|<=|>=|<|>|\+|-|\*|\/|%|=|true|false|null/,
+          name: "constant.numeric.glang",
+          match: /==|!=|<=|>=|<|>|\+|-|\*|\/|%|\^|=|true|false|null/,
         },
       ],
     },
@@ -63,7 +63,7 @@ const glang = {
 
 const highlighter = await createHighlighter({
   langs: [glang, "sh", "toml"],
-  themes: ["github-dark-dimmed"],
+  themes: ["github-dark"],
 });
 
 // https://vitepress.dev/reference/site-config
@@ -254,7 +254,7 @@ export default defineConfig({
     highlight: (code, lang, attrs) => {
       return highlighter.codeToHtml(code, {
         lang: lang,
-        theme: "github-dark-dimmed",
+        theme: "github-dark",
       });
     },
     languageAlias: { glang: "glang" },
