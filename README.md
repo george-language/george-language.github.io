@@ -38,7 +38,7 @@ Clone the repo and install dependencies:
 
 ```bash
 git clone https://github.com/george-language/george-language.github.io.git
-cd glang-website
+cd george-language.github.io
 npm install
 ```
 
