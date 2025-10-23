@@ -2,7 +2,27 @@
 title: "Install"
 ---
 
-# Download GLang 0.1
+# Download GLang <span id="glang-version">...</span>
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(async () => {
+  const el = document.getElementById("glang-version")
+  try {
+    const res = await fetch("https://api.github.com/repos/george-language/glang/releases/latest", {
+      headers: { "Accept": "application/vnd.github+json" }
+    })
+    const data = await res.json()
+    let tag = data.tag_name || "0.0"
+    if (tag.startsWith("v")) tag = tag.slice(1)
+    el.textContent = tag
+  } catch (err) {
+    console.error("Failed to fetch glang version:", err)
+    el.textContent = "unknown"
+  }
+})
+</script>
 
 [🪟 Download GLang for Windows (.exe)](https://github.com/george-language/glang/releases/latest/download/GeorgeLanguage+windows_setup.exe)
 
