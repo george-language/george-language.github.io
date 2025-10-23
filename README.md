@@ -77,4 +77,4 @@ Feel free to tag us in your PRs or discussions if you need a review or feedback!
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE). You’re free to use, modify, and share; just keep attribution!
+This project is licensed under the MIT License. You’re free to use, modify, and share; just keep attribution!
