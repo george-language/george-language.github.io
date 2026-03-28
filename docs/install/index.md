@@ -4,22 +4,38 @@ title: "Install"
 
 # Download GLang <span id="glang-version">...</span>
 
+<a id="win-link">🪟 Download GLang for Windows (.exe)</a>
+<a id="mac-link">🍏 Download GLang for macOS (.pkg)</a>
+
 <script setup>
 import { onMounted } from 'vue'
 
 onMounted(async () => {
-  const el = document.getElementById("glang-version")
+  const versionEl = document.getElementById("glang-version")
+  const winLink = document.getElementById("win-link")
+  const macLink = document.getElementById("mac-link")
+
   try {
     const res = await fetch("https://api.github.com/repos/george-language/glang/releases/latest", {
       headers: { "Accept": "application/vnd.github+json" }
     })
     const data = await res.json()
+
     let tag = data.tag_name || "0.0"
     if (tag.startsWith("v")) tag = tag.slice(1)
-    el.textContent = tag
+    versionEl.textContent = tag
+
+    const assets = data.assets || []
+
+    const win = assets.find(a => a.name.includes("windows_setup.exe"))
+    const mac = assets.find(a => a.name.includes("macos_setup.pkg"))
+
+    if (win) winLink.href = win.browser_download_url
+    if (mac) macLink.href = mac.browser_download_url
+
   } catch (err) {
     console.error("Failed to fetch glang version:", err)
-    el.textContent = "unknown"
+    versionEl.textContent = "unknown"
   }
 })
 </script>
