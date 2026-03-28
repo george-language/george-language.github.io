@@ -40,10 +40,6 @@ onMounted(async () => {
 })
 </script>
 
-[🪟 Download GLang for Windows (.exe)](https://github.com/george-language/glang/releases/latest/download/GeorgeLanguage+windows_setup.exe)
-
-[🍏 Download GLang for macOS (.pkg)](https://github.com/george-language/glang/releases/latest/download/GeorgeLanguage+macos_setup.pkg)
-
 _Beta or previous versions are available [here](https://github.com/george-language/glang/releases)._
 
 ## Pre-Install Notes
