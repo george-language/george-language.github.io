@@ -4,8 +4,8 @@ title: "Install"
 
 # Download GLang <span id="glang-version">...</span>
 
-<a id="win-link">🪟 Download GLang for Windows (.exe)</a>
-<a id="mac-link">🍏 Download GLang for macOS (.pkg)</a>
+<a id="win-link" style="display: block;">🪟 Download GLang for Windows (.exe)</a>
+<a id="mac-link" style="display: block;">🍏 Download GLang for macOS (.pkg)</a>
 
 <script setup>
 import { onMounted } from 'vue'
