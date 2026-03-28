@@ -15,36 +15,30 @@ But don’t worry, GLang won’t set your computer on fire when something goes w
 And the output:
 
 ```sh
-error: division by zero
-    --> example.glang:1:6
-     |
-   1 | 1 / 0;
-     |     ^
+Error: division by zero
+| in > example.glang:1:5
+|
+| 1 / 0; # dividing by zero causes an error
+|     ^
 ```
 
 ## What The Error Says
 
 GLang highlights _exactly_ where things went wrong, showing you the offending line and character.
 
-- `error:` tells you what error occured.
-- `-->` indicates where and what file caused the issue.
+- `Error:` tells you what error occured.
+- `in >` indicates where and what file caused the issue.
 - `^` shows what code stopped the program's execution
 
 Sometimes, you’ll also get a helpful hint to steer you in the right direction:
 
 ```sh
-error: variable name 'example' is undefined
-    --> example.glang:1:1
-     |
-   1 | example
-     | ^^^^^^^ help: define a variable with the syntax 'obj <variable name> = <value>;'
+Error: variable name 'example' is undefined
+| in > <stdin>:1:1
+|
+| example
+| ^^^^^^^ help: define a variable with the syntax 'obj <variable name> = <value>;'
 ```
-
-Nice start, kdog — this already reads clearly and has a good flow! Let’s tighten it up a bit, make the explanation a little more structured, and highlight *why* the traceback happens so readers really “get” it.
-
-Here’s a refined version:
-
----
 
 ## Tracebacks
 
@@ -61,17 +55,17 @@ Here, both arguments are strings, but `push` expects the first argument to be a 
 That’s why you’ll see two errors:
 
 ```sh
-error: argument 'list' must be type list
-    --> library/fundamental/list.glang:7:9
-     |
-   7 |         uhoh("argument 'list' must be type list");
-     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: argument 'list' must be type list
+| in > library/fundamental/list.glang:7:9
+|
+|         uhoh("argument 'list' must be type list");
+|         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-error: argument 'list' must be type list
-    --> example.glang:1:1
-     |
-   1 | push("", "");
-     | ^^^^^^^^^^^
+Error: argument 'list' must be type list
+| in > example.glang:1:1
+|
+| push("", "");
+| ^^^^^^^^^^^^
 ```
 
 The first error shows **where** the problem started (inside the GLang library). The second shows **where** it reached the code.
