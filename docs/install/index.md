@@ -22,7 +22,6 @@ onMounted(async () => {
     const data = await res.json()
 
     let tag = data.tag_name || "0.0"
-    if (tag.startsWith("v")) tag = tag.slice(1)
     versionEl.textContent = tag
 
     const assets = data.assets || []
