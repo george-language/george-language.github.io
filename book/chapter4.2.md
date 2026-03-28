@@ -69,7 +69,7 @@ func show_mood() {
 show_mood();  # outputs "Happy"
 ```
 
-If you redefine a variable with the same name **inside** a function, the inner one hides (or **shadows**) the global one, modifying it:
+If you redefine a variable with the same name **inside** a function, the inner one hides (or **shadows**) the global one, essentially creating a local "clone" and never modifying the global version:
 
 ```glang
 obj mood = "Happy";
@@ -80,7 +80,7 @@ func show_mood() {
 }
 
 show_mood();  # prints "Angry"
-bark(mood);   # prints "Angry"
+bark(mood);   # prints "Happy"
 ```
 
 ## Nested Scope
