@@ -17,7 +17,7 @@ GLang is focused on being as close as possible to human language without the com
 This book references many popular computer science terms you should familiarize yourself with, such as:
 
 - **Memory**: Read and write-able memory, most commonly known as your computer's RAM
-- **Stack vs Heap**: Memory regions that are reserved for different uses, where the stack is fixed in size and extremely fast for read/writes, and the heap is flexible allowing for larger in-memory objects.
+- **Stack vs Heap**: Memory regions that are reserved for different uses, where the stack is fixed in size and the heap is flexible
 - **Types**: Ways to represent real-world objects in programming (similar to how text is commonly known as a "string" type)
-- **Collections**: Infinitely growable "storage containers" that live in memory
-- **Keywords**: Words that are reserved for the language itself, preventing the use of keyword-named variable names.
+- **Collections**: Infinitely growable "storage containers" to represent diverse data structures
+- **Keywords**: Words that are reserved for the language itself, preventing the use of keyword-named variable names
