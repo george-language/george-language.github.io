@@ -52,7 +52,7 @@ obj x = 10 ^ 2; # x is 100
 
 ## The "%" Operator
 
-The percent sign (%) will give you the remainder after dividing two numbers.
+The percent sign (%) will give you the remainder after dividing two numbers (called the modulo).
 
 ```glang
 obj x = 10 % 3; # x is 1
@@ -68,10 +68,10 @@ obj x = 2 * (2 + 2); # x is 8
 
 ## Your Challenge 🤔
 
-Use GLang's math operators to define a variable named math_is_easy with the value of 1000.
+Use GLang's math operators to create a variable named `x` with the value of subtracting 50 from 100 and dividing the result by 2.
 
 ::: details Answer
 ```glang
-obj math_is_easy = 10 ^ 3;
+obj x = (100 - 50) / 2;
 ```
 :::
