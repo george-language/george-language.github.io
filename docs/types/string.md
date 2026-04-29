@@ -4,7 +4,7 @@ title: "string"
 
 # Type: `string`
 
-Represents UTF-8 encoded text.
+A collection of UTF-8 encoded characters.
 
 ```glang
 obj string = "This is a string!";
@@ -71,16 +71,6 @@ Returns the character at `index` of `string`.
 obj x = "12345";
 
 bark(charat(x, 0)); # output: 1
-```
-
-## `clear(string)`
-Clears `string` and returns a new copy.
-
-```glang
-obj x = "This is a string";
-obj x = clear(x);
-
-bark(x); # output:
 ```
 
 ## `reverse(string)`

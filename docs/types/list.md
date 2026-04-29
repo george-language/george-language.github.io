@@ -4,7 +4,7 @@ title: "list"
 
 # Type: `list`
 
-Infinitely growable collection of values.
+A heap allocated collection of objects.
 
 ```glang
 obj x = [1, 2, 3];
@@ -23,23 +23,23 @@ obj x = [1, 2, 3];
 bark(islist(x)); # true!
 ```
 
-## `push(list, value)`
+## `add(list, value)`
 Adds the `value` to `list`.
 
 ```glang
 obj x = [1, 2, 3];
-push(x, 4);
+add(x, 4);
 
 bark(x); # output: [1, 2, 3, 4]
 ```
 
-## `append(list_a, list_b)`
+## `combine(list_a, list_b)`
 Combine a list with another list by copying `list_b`'s elements into `list_a`.
 
 ```glang
 obj x = [1, 2, 3];
 obj y = [4, 5, 6];
-append(x, y);
+combine(x, y);
 
 bark(x); # output: [1, 2, 3, 4, 5, 6]
 ```
@@ -54,12 +54,12 @@ remove(x, 0);
 bark(x); # output: [2, 3]
 ```
 
-## `retrieve(list, index)`
+## `get(list, index)`
 Returns the value at `index` inside `list`.
 
 ```glang
 obj x = [1, 2, 3];
-obj value_in_list = retrieve(x, 0);
+obj value_in_list = get(x, 0);
 
 bark(value_in_list); # output: 1
 ```
@@ -74,21 +74,11 @@ bark(contains(x, 1)); # true!
 ```
 
 ## `reverse(list)`
-Reverses `list` **in place** (no new copy).
+Reverses `list` in place.
 
 ```glang
 obj x = [1, 2, 3, 4];
 reverse(x);
 
 bark(x); # output: [4, 3, 2, 1]
-```
-
-## `clear(list)`
-Clears `list` and returns a new copy.
-
-```glang
-obj x = [1, 2, 3, 4];
-obj x = clear(x);
-
-bark(x); # output: []
 ```
