@@ -7,6 +7,8 @@ title: "fetch"
 Import an external `.glang` file.
 
 ```glang
+# fetch [module]
+
 fetch "path/to/my/module.glang";
 
 my_modules_function();

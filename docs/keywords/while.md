@@ -4,10 +4,12 @@ title: "while"
 
 # Keyword: `while`
 
-A loop running while a condition is true. Programmers might be familiar with the while loop.
+A loop running while an expression is met.
 
 ```glang
-while true {
+# while [expression] { ... }
+
+while 1 == 1 {
     bark("oh no! this loop runs infinitely!!");
 }
 ```

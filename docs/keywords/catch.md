@@ -7,14 +7,16 @@ title: "catch"
 Represents the safe block of code to execute after a `try` block fails. _Used in chain with the [`try` keyword](/docs/keywords/try)._
 
 ```glang
+# try { ... } catch [name] { ... }
+
 try {
     # ...
-} safe error {
+} catch error {
     bark("Some error occured: " + error);
 }
 ```
 
-`catch` takes an `<indentifier>` as the error output, where `<indentifier>` is a string type with the encountered error inside.
+`catch` takes a variable name as the error output, where the variable name is a string type with the encountered error inside.
 
 ```glang
 try {

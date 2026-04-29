@@ -4,9 +4,10 @@ title: "not"
 
 # Keyword: `not`
 
- Reverse a boolean attribute.
+ Flip a boolean attribute.
 
  ```glang
- bark(not true); # false!
- bark(not false); # true!
+ # not [x]
+ bark(not true); # false
+ bark(not false); # true
  ```

@@ -66,8 +66,10 @@ Type '/exit' to exit
 >>>
 ```
 
+_You can press `Ctrl+C` to exit the process._
+
 ## Post-Install Notes
-GLang includes a set of tools you can use, like `glang self <option>` to manage the GLang binary and components.
+GLang includes a set of tools you can use to manage the GLang binary and components.
 
 Updating to the latest version is as simple as:
 
