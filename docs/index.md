@@ -11,7 +11,7 @@ title: "Documentation"
 - [`obj`](/docs/keywords/obj)
 - [`stay`](/docs/keywords/stay)
 - [`if`](/docs/keywords/if)
-- [`alsoif`](/docs/keywords/alsoif)
+- [`also`](/docs/keywords/also)
 - [`otherwise`](/docs/keywords/otherwise)
 - [`func`](/docs/keywords/func)
 - [`walk`](/docs/keywords/walk)
@@ -28,7 +28,6 @@ title: "Documentation"
 - [`and`](/docs/keywords/and)
 - [`or`](/docs/keywords/or)
 - [`not`](/docs/keywords/not)
-- [`skip`](/docs/keywords/skip)
 
 **Types**:
 - [`number`](/docs/types/number)
