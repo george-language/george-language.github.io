@@ -16,6 +16,12 @@ You can install kennels with:
 glang install path/to/kennel/file
 ```
 
+They can also be installed from URLs:
+
+```sh
+glang install https://example.com/example.kennel
+```
+
 Kennels are stored in your local machine at:
 
 ```
@@ -28,7 +34,7 @@ And the registry is inside:
 .glang/packages.json
 ```
 
-Kennels are installed at the global level; any GLang project on your system can use them..
+Kennels are installed at the global level; any GLang project on your system can use them.
 
 ## Managing Kennels
 
@@ -40,7 +46,7 @@ glang remove <name>
 
 ## Using a Kennel
 
-Kennels are imported using [`fetch`](/docs/keywords/fetch). They are referenced with `name` and `version`, seperated by `@`.
+Kennels are imported using [`fetch`](/docs/keywords/fetch). They are referenced with `name` and `version`, separated by `@`.
 
 ```glang
 fetch "name@version"; # name = kennel name, version = kennel version
