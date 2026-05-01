@@ -16,7 +16,7 @@ if x == 10 { # '==' is a operator to check if something equals another value
 }
 ```
 
-`==` is what we call a **boolean operator**. These are different from math operators, as they compare two values instead of changing them.
+`==` is what we call a **boolean operator**. These are different from math operators, as they compare values instead of modifying them.
 
 - `==` compares two values to see if they are the same
 - `!=` compares two values to see if they are not the same
@@ -24,6 +24,8 @@ if x == 10 { # '==' is a operator to check if something equals another value
 - `<` compares two values to see if one is less than another
 - `>=` compares two values to see if one is greater than or equal to another
 - `<=` compares two values to see if one is less than or equal to another
+- `and` compares two values to see if both conditions are true
+- `or` compares two values to see if one (or both) conditions is true
 
 The `if` statement takes a comparison (often called an expression) to determine if the value is true or false. If true, run the code, otherwise ignore and continue.
 
@@ -47,7 +49,7 @@ if x == 11 {
 }
 ```
 
-`otherwise` is often thought of as the "default" case. If any comparisons above are not true, `otherwise` will run. That means we can sandwich `alsoif` statements between to create proper **control flow** for our program!
+`otherwise` is often thought of as the "default" case. If any comparisons above are not true, `otherwise` will run. That means we can sandwich `also if` statements between `if` and `otherwise` to create proper **control flow** for our program.
 
 ```glang
 obj x = 10;
