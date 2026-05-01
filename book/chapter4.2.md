@@ -35,10 +35,10 @@ func make_cookie() {
 }
 
 make_cookie();
-bark(dough);  # dough is gone, only existed inside make_cookie
+bark(dough);  # 'dough' is gone, it only existed inside 'make_cookie'
 ```
 
-Local scope keeps your code safe from accidental variable name collisions. Two different functions can both have a variable named `x`, and they won’t mess each other up.
+Local scope keeps your code safe from accidental variable name collisions. Two different functions can both have a variable named `x`, and they won’t interfere with each other.
 
 ```glang
 func one() {
@@ -57,7 +57,7 @@ two();  # outputs 2
 
 ## Global Scope
 
-If you create a variable outside of any function, it’s considered **global**. That means every function can access it (unless it gets shadowed).
+If you create a variable outside of any function, it’s considered **global**. That means every function can access it.
 
 ```glang
 obj mood = "Happy";
