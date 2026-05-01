@@ -4,19 +4,19 @@ title: "Chapter 3.1"
 
 # Chapter 3.1: If, Also If, and Otherwise
 
-## Conditions
+## Booleans
 
-It is very common that programmers use conditions in their code. Conditions are a way to execute code if something meets a certain criteria. The `if` statement is a great example.
+Before introducing conditional programming, it's important to understand boolean logic. 
 
 ```glang
-obj x = 10;
-
-if x == 10 { # '==' is a operator to check if something equals another value
-    bark("x is 10!"); # since x is 10, this code will always be ran inside the 'if' block.
-}
+obj x = true;
+obj y = false;
+obj z = null;
 ```
 
-`==` is what we call a **boolean operator**. These are different from math operators, as they compare values instead of modifying them.
+`true` is 1, and is understood as the true value. `false` is 0, and is understood as the false value. `null` is 0 as well, but is understood as the "none" or null value, meaning nothing.
+
+You can get `true` or `false` by using **boolean operators**. These are different from math operators, as they compare values instead of modifying them.
 
 - `==` compares two values to see if they are the same
 - `!=` compares two values to see if they are not the same
@@ -27,7 +27,28 @@ if x == 10 { # '==' is a operator to check if something equals another value
 - `and` compares two values to see if both conditions are true
 - `or` compares two values to see if one (or both) conditions is true
 
-The `if` statement takes a comparison (often called an expression) to determine if the value is true or false. If true, run the code, otherwise ignore and continue.
+_Additionally, `not` flips a value (true -> false, false -> true)_
+
+```glang
+obj x = 10 == 10; # true, 10 is equal to 10
+bark(x) # 1 (true)
+
+bark(not true); # 0 (false)
+```
+
+## Conditions
+
+Conditions are a way to execute code if something is true, met by a certain criteria usually from boolean operators. The `if` statement is a great example.
+
+```glang
+obj x = 10;
+
+if x == 10 { # x == 10, true
+    bark("x is 10!"); # since x is 10, this code will always be ran.
+}
+```
+
+The `if` statement takes a comparison (or any expression) to determine if the value is true or false/null. If true, run the code, otherwise ignore and continue.
 
 ```glang
 obj x = 10;
@@ -49,7 +70,7 @@ if x == 11 {
 }
 ```
 
-`otherwise` is often thought of as the "default" case. If any comparisons above are not true, `otherwise` will run. That means we can sandwich `also if` statements between `if` and `otherwise` to create proper **control flow** for our program.
+`otherwise` is often thought of as the "default" case. If any comparisons above are not true, `otherwise` will run. That means we can place `also if` statements between `if` and `otherwise` to create proper **control flow** for our program.
 
 ```glang
 obj x = 10;
