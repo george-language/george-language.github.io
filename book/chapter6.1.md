@@ -26,7 +26,7 @@ Error: division by zero
 
 GLang highlights _exactly_ where things went wrong, showing you the offending line and character.
 
-- `Error:` tells you what error occured.
+- `Error:` tells you what error occurred.
 - `in >` indicates where and what file caused the issue.
 - `^` shows what code stopped the program's execution
 
@@ -34,7 +34,7 @@ Sometimes, you’ll also get a helpful hint to steer you in the right direction:
 
 ```sh
 Error: variable name 'example' is undefined
-| in > <stdin>:1:1
+| in > example.glang:1:1
 |
 | example
 | ^^^^^^^ help: define a variable with the syntax 'obj <variable name> = <value>;'
@@ -42,30 +42,29 @@ Error: variable name 'example' is undefined
 
 ## Tracebacks
 
-Sometimes, multiple errors appear at once. This is called a **traceback**. A traceback happens when an error is **propagated upward** through the code, from where it occurs to wherever the function was called.
+Sometimes, multiple errors appear at once. This is called a **traceback**. A traceback happens when an error is propagated upward through the code, from where it occurs to wherever the function was called.
 
-For example, consider the `push` function:
+For example, consider the `add` function:
 
 ```glang
-push("", "");
+add("", "");
 ```
 
-Here, both arguments are strings, but `push` expects the first argument to be a **list**. GLang first detects the problem inside its library code, then reports it again at the point where you called the function.
+Here, both arguments are strings, but `add` expects the first argument to be a list. GLang first detects the problem inside its library code, then reports it again at the point where you called the function.
 
 That’s why you’ll see two errors:
 
 ```sh
 Error: argument 'list' must be type list
-| in > library/fundamental/list.glang:7:9
+| in > src/core/list.glang:7:9
 |
 |         uhoh("argument 'list' must be type list");
 |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Error: argument 'list' must be type list
-| in > example.glang:1:1
+| in > example:1:1
 |
-| push("", "");
-| ^^^^^^^^^^^^
+| add("", "");
+| ^^^^^^^^^^^
 ```
 
 The first error shows **where** the problem started (inside the GLang library). The second shows **where** it reached the code.

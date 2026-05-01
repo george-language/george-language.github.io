@@ -4,9 +4,7 @@ title: "Chapter 6.2"
 
 # Chapter 6.2: Handling Errors
 
-Programmers often want to **bypass** errors because they expect them to happen. That’s perfectly fine, some operations, like reading a file or taking the square root of a negative number, are naturally prone to failure.
-
-GLang provides a safe way to handle these situations using `try` and `catch`.
+GLang provides a safe way to handle errors and unsafe situations using `try` and `catch`.
 
 ```glang
 try {
@@ -24,7 +22,7 @@ When this code runs, you’ll see something like:
 Some error occurred: division by zero
 ```
 
-After handling the error, the program continues running normally. In essence, `try` and `catch` tell GLang, _"Attempt this code, and if it fails, handle the issue gracefully before moving on."_
+After handling the error, the program continues running normally. `try` and `catch` tell GLang to attempt the code in `try`, and if it fails, handle the issue inside of `catch` before moving on.
 
 ## Your Challenge 🤔
 
