@@ -6,7 +6,7 @@ title: "Chapter 2.3"
 
 ## Output
 
-Remember our "Hello, World!" program? That is the output resulting from our program, and is a very important concept of programming. In fact, the whole purpose of a program is to create some output, whether it's writing a file or displaying a 3D game.
+Remember our "Hello, World!" program? That is the output resulting from our program, and its a very important concept of programming. In fact, the whole purpose of a program is to create some output, whether it's writing a file or displaying a 3D game.
 
 GLang allows you to display your program's output right inside of the terminal, with the `bark` function. Functions will be touched on in later chapters, but for now, remember them as little blocks of code we can execute by **calling** them.
 
@@ -22,7 +22,7 @@ obj y = "This is some string.";
 bark(y);
 ```
 
-In the terminal, you'll see the text `This is some string`. because GLang is displaying the value of `y`.
+In the terminal, you'll see the text `This is some string.` because GLang is displaying the value of `y`.
 
 ## Input
 
@@ -36,4 +36,4 @@ obj x = chew("Enter your name: ");
 bark(x);
 ```
 
-Here, we call the `chew` function prompting the terminal with `Enter your name: `, and until something is entered, the program freezes. When `x` is outputted, it will show whatever you typed in the terminal.
+Here, we call the `chew` function prompting the terminal with `Enter your name: `, and until something is entered, the program freezes. When `x` is outputted, it will show whatever was typed in the terminal.

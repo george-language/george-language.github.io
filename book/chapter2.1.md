@@ -6,7 +6,7 @@ title: "Chapter 2.1"
 
 ## Types
 
-GLang gives you the option to store data in the form of a type. This data can be accessed via a variable (a little object stored in your computer's memory)
+GLang gives you the ability to store data in the form of a type. This data can be accessed from a variable (a reference to an object stored in your computer's memory)
 
 There are three primary types in GLang, **number**, **string**, and **list**. The number type is hinted by the name, a number.
 
@@ -14,9 +14,9 @@ There are three primary types in GLang, **number**, **string**, and **list**. Th
 10
 ```
 
-The string type may be a little confusing, but its actually a **collection of characters** (a.k.a. a string of characters)
+The string type may be a little confusing, but its actually a **collection of characters**.
 
-We can use this to store text - from your favorite quote to an 8 page essay, the string type can hold it. Strings are heap allocated, meaning we can store large amounts of characters.
+Strings can be used to store text - from your favorite quote to an 8 page essay, the string type can hold it. Strings are heap allocated, meaning we can store large amounts of characters.
 
 ```glang
 "This is a string of text. We can add emojis 😼, special characters !#@$^#, and even other languages 你好."
@@ -24,7 +24,7 @@ We can use this to store text - from your favorite quote to an 8 page essay, the
 
 _Since strings are UTF-8 encoded, you can use any UTF-8 supported code point inside of strings. Learn more about UTF-8 [here](https://en.wikipedia.org/wiki/UTF-8)_
 
-Lastly there's the list type, a dynamic storage container of items. The list type can hold every other type, multiples of it, and even itself. Lists are heap allocated, allowing you to grow lists to massive amounts of items.
+Lastly there's the list type, a dynamic storage container of items. The list type can hold every other type, multiples of it, and even itself. Lists are heap allocated, allowing you to grow them to massive amounts of items.
 
 ```glang
 [1, 2, 3, 4, 5]
@@ -36,7 +36,7 @@ We'll talk more about this type later on in the book, but for now, think of it a
 
 One of the most important parts of programming is storing data. Programmers often do this by creating a **variable**.
 
-Variables allow us to store types with *names* in memory. Instead of telling the computer "give me the value of memory address 0x7ffe5367e044", we can just reference it with a variable!
+Variables allow us to store types with _names_ in memory. Instead of telling the computer "give me the value of memory address 0x7ffe5367e044", we can just reference it with a variable!
 
 ```glang
 obj x = 10;
@@ -50,7 +50,7 @@ To change a variable’s value, just assign a new value to it (without the `obj`
 x = 20;
 ```
 
-The cool thing about variables are their ability to have names other than `x`. Variable names can:
+Variables are allowed to have names other than `x`. Variable names can:
 
 - Contain letters, numbers, and underscores
 - Not contain spaces or special symbols (like ! or $)
@@ -63,7 +63,7 @@ obj MY_3_FAVORITE_FOODS = ["Cake", "Pizza", "Burgers"];
 
 ## Constants
 
-Additionally, there are **constants**. Much similar to variables, constants can also store data - just in a static form. This means we can never change a constant or it's data once it is created.
+Additionally, there are **constants**. Much similar to variables, constants can also store data, just in a static form. This means we can never change a constant or it's data once it is created.
 
 ```glang
 stay X = 10;
