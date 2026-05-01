@@ -10,7 +10,7 @@ When a language is interpreted, it essentially means the language is run through
 
 _Examples of interpreted languages include Python, JavaScript, and Ruby_
 
-GLang is focused on being as close as possible to human language without the complexity of memory management. Most programming languages (e.g. C or C++) leave the programmer up to controlling the computer's memory. We commonly refer to these languages as "low level", because they talk directly to your computer's hardware. GLang is instead a **high-level** language, it manages all the memory for you!
+GLang is focused on being as close as possible to the English language without introducing the complexity of memory management. Most programming languages (e.g. C or C++) leave the programmer up to controlling the computer's memory. We commonly refer to these languages as "low level", because they talk directly to your computer's hardware. GLang is instead a **high-level** language; it manages all the memory for you. 
 
 ## Terms You Should Know
 
@@ -19,5 +19,7 @@ This book references many popular computer science terms you should familiarize 
 - **Memory**: Read and write-able memory, most commonly known as your computer's RAM
 - **Stack vs Heap**: Memory regions that are reserved for different uses, where the stack is fixed in size and the heap is flexible
 - **Types**: Ways to represent real-world objects in programming (similar to how text is commonly known as a "string" type)
-- **Collections**: Infinitely growable "storage containers" to represent diverse data structures
+- **Collections**: Unique storage methods to represent diverse data structures
 - **Keywords**: Words that are reserved for the language itself, preventing the use of keyword-named variable names
+
+We also recommend a basic understanding of the terminal. A great quick guide is available [here](https://www.peerigon.com/en/blog/beginners-guide-terminal/).
