@@ -56,9 +56,9 @@ obj x = 10;
 
 if x == 0 {
     bark("x is 0!");
-} alsoif x == 10 { # as many 'alsoif' as you like!
+} also if x == 10 { # as many 'also if' statements as necessary
     bark("x is 10!");
-} alsoif x == 20 {
+} also if x == 20 {
     bark("x is 20!");
 } otherwise {
     bark("x is anything but 0, 10, or 20!");
