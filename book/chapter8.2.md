@@ -40,7 +40,13 @@ For a full list of supported colors and styles, check out the [official docs](ht
 
 ## Step 3: Applying Styles to Your Banking System
 
-Now that you’ve got `fancy-terminal` installed, you can make your bank’s messages easier to read (and way cooler).
+Now that you’ve got `fancy-terminal` installed, you can make your bank’s messages easier to read (and way cooler). To import `fancy-terminal`, we use the `fetch` syntax:
+
+```glang
+fetch "fancy_terminal@latest";
+```
+
+_More info on importing kennels [here](/docs/kennels/#using-a-kennel)_
 
 For example, in **`system.glang`**, you can highlight error messages in red:
 
