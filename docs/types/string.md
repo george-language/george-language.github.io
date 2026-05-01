@@ -91,3 +91,30 @@ obj x = "Hello, World!";
 
 bark(contains(x, "Hello")); # true!
 ```
+
+## `trim(str)`
+Removes any whitespace characters from the start and end of `str`, returning a new copy of the trimmed string.
+
+```glang
+obj x = " Hello World ";
+
+bark(trim(x)); # 'Hello World' (no whitespace characters at start and end)
+```
+
+## `trim_start(str)`
+Removes any whitespace characters from the start of `str`, returning a new copy of the trimmed string.
+
+```glang
+obj x = " Hello World ";
+
+bark(trim(x)); # 'Hello World ' (no whitespace characters at start)
+```
+
+## `trim_end(str)`
+Removes any whitespace characters from the end of `str`, returning a new copy of the trimmed string.
+
+```glang
+obj x = " Hello World ";
+
+bark(trim(x)); # ' Hello World' (no whitespace characters at end)
+```
