@@ -218,6 +218,8 @@ export default defineConfig({
                 { text: "std_format", link: "/docs/modules/std_format" },
                 { text: "std_hashmap", link: "/docs/modules/std_hashmap" },
                 { text: "std_math", link: "/docs/modules/std_math" },
+                { text: "std_random", link: "/docs/modules/std_random" },
+                { text: "std_time", link: "/docs/modules/std_time" },
               ],
             },
             {

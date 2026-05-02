@@ -41,6 +41,8 @@ title: "Documentation"
 - [`std_format`](/docs/modules/std_format)
 - [`std_hashmap`](/docs/modules/std_hashmap)
 - [`std_math`](/docs/modules/std_math)
+- [`std_random`](/docs/modules/std_random)
+- [`std_time`](/docs/modules/std_time)
 
 **Kennels**:
 - [About Kennels](/docs/kennels/)
