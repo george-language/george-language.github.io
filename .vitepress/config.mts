@@ -21,7 +21,7 @@ const glang = {
         {
           name: "keyword.control.glang",
           match:
-            "\\b(fetch|not|and|or|try|catch|next|walk|through|if|alsoif|otherwise|obj|stay|step|while|leave|func|give)\\b",
+            "\\b(fetch|not|and|or|try|catch|next|walk|through|if|also|otherwise|obj|stay|step|while|leave|func|give)\\b",
         },
       ],
     },
@@ -179,7 +179,7 @@ export default defineConfig({
                 { text: "obj", link: "/docs/keywords/obj" },
                 { text: "stay", link: "/docs/keywords/stay" },
                 { text: "if", link: "/docs/keywords/if" },
-                { text: "alsoif", link: "/docs/keywords/alsoif" },
+                { text: "also", link: "/docs/keywords/also" },
                 {
                   text: "otherwise",
                   link: "/docs/keywords/otherwise",
@@ -199,7 +199,6 @@ export default defineConfig({
                 { text: "and", link: "/docs/keywords/and" },
                 { text: "or", link: "/docs/keywords/or" },
                 { text: "not", link: "/docs/keywords/not" },
-                { text: "skip", link: "/docs/keywords/skip" },
               ],
             },
             {
@@ -219,6 +218,8 @@ export default defineConfig({
                 { text: "std_format", link: "/docs/modules/std_format" },
                 { text: "std_hashmap", link: "/docs/modules/std_hashmap" },
                 { text: "std_math", link: "/docs/modules/std_math" },
+                { text: "std_random", link: "/docs/modules/std_random" },
+                { text: "std_time", link: "/docs/modules/std_time" },
               ],
             },
             {

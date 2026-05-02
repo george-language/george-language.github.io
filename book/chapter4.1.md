@@ -18,9 +18,7 @@ my_function("Hello, world!");
 
 ## Function Definitions
 
-Creating your own function is simpler than it looks.
-
-You start with the `func` keyword, give it a name (just like a variable), then specify any arguments it should take, followed by the code to run.
+Creating a function starts with the `func` keyword, give it a name (just like a variable), then specify any arguments it should take, followed by the code to run.
 
 ```glang
 func the_name_of_a_function(argument1, argument2) {
@@ -28,8 +26,7 @@ func the_name_of_a_function(argument1, argument2) {
 }
 ```
 
-Arguments are objects that the function receives when it’s called.
-These can then be used within the function’s code.
+Arguments are objects that the function receives when it’s called. These can then be used within the function’s code.
 
 ```glang
 func define_x(value) {
@@ -37,7 +34,7 @@ func define_x(value) {
 }
 ```
 
-If you want your function to send something back when it’s done, use the `give` keyword to **return** a value.
+If you want a function to send something back when it’s done, use the `give` keyword to **return** a value.
 
 ```glang
 func return_value(value) {

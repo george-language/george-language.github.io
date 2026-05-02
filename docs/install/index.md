@@ -26,8 +26,8 @@ onMounted(async () => {
 
     const assets = data.assets || []
 
-    const win = assets.find(a => a.name.includes("windows_setup.exe"))
-    const mac = assets.find(a => a.name.includes("macos_setup.pkg"))
+    const win = assets.find(a => a.name.includes("installer.exe"))
+    const mac = assets.find(a => a.name.includes("installer.pkg"))
 
     if (win) winLink.href = win.browser_download_url
     if (mac) macLink.href = mac.browser_download_url
@@ -66,14 +66,24 @@ Type '/exit' to exit
 >>>
 ```
 
-## Post-Install Notes
-GLang includes a set of tools you can use, like `glang self <option>` to manage the GLang binary and components.
+_You can press `Ctrl+C` to exit the process._
 
-Updating to the latest version is as simple as:
+## Post-Install Notes
+GLang includes a set of tools you can use to manage the GLang binary and components.
+
+Updating to the latest version can be done with:
 
 ```sh
 glang self update
 ```
+
+Updating GLang's library (`lib`) can be done with:
+
+```sh
+glang self update --lib
+```
+
+_This is done automatically by `glang self update`_
 
 Uninstalling all components and external files is as simple as:
 

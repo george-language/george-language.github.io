@@ -8,7 +8,9 @@ _Functions are [also types](/docs/types/function)_
 A function or function object.
 
 ```glang
-func example(arg1, arg2) { # as many args as you like!
+# func [name]([arguments]) { ... }
+
+func example(arg1, arg2) { # the number of arguments can be 0 up to 'n' length
     bark("arg1: " + tostring(arg1));
     bark("arg2: " + tostring(arg2));
 }
@@ -16,7 +18,7 @@ func example(arg1, arg2) { # as many args as you like!
 example(1, 2); # call the function
 ```
 
-Functions can also be assigned to objects.
+When defined, functions are assigned to their corresponding variable names.
 
 ```glang
 func example(arg1, arg2) {
@@ -26,15 +28,17 @@ func example(arg1, arg2) {
 
 obj function = example;
 
-function(1, 2); # call the function as the object name
+function(1, 2); # call the function (linked to example function)
 ```
 
-Anonymous functions are used in pair with objects.
+Functions can additionally be anonymous, allowing you to use them as "closures".
 
 ```glang
-obj anonymous = func (value) { # no name
-    bark(value);
-};
+func call_a_function(fn) {
+    fn();
+}
 
-anonymous("GLang");
+call_a_function(func () { # no name
+    bark("anonymous");
+});
 ```

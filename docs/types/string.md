@@ -4,7 +4,7 @@ title: "string"
 
 # Type: `string`
 
-Represents UTF-8 encoded text.
+A collection of UTF-8 encoded characters.
 
 ```glang
 obj string = "This is a string!";
@@ -73,16 +73,6 @@ obj x = "12345";
 bark(charat(x, 0)); # output: 1
 ```
 
-## `clear(string)`
-Clears `string` and returns a new copy.
-
-```glang
-obj x = "This is a string";
-obj x = clear(x);
-
-bark(x); # output:
-```
-
 ## `reverse(string)`
 Reverses the characters of `string`. Strings are recreated in reverse and not modified in place.
 
@@ -100,4 +90,31 @@ Returns `true` if `string` contains the specified `object`. `object` is treated 
 obj x = "Hello, World!";
 
 bark(contains(x, "Hello")); # true!
+```
+
+## `trim(str)`
+Removes any whitespace characters from the start and end of `str`, returning a new copy of the trimmed string.
+
+```glang
+obj x = " Hello World ";
+
+bark(trim(x)); # 'Hello World' (no whitespace characters at start and end)
+```
+
+## `trim_start(str)`
+Removes any whitespace characters from the start of `str`, returning a new copy of the trimmed string.
+
+```glang
+obj x = " Hello World ";
+
+bark(trim(x)); # 'Hello World ' (no whitespace characters at start)
+```
+
+## `trim_end(str)`
+Removes any whitespace characters from the end of `str`, returning a new copy of the trimmed string.
+
+```glang
+obj x = " Hello World ";
+
+bark(trim(x)); # ' Hello World' (no whitespace characters at end)
 ```

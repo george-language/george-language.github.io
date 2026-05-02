@@ -4,7 +4,7 @@ title: "Chapter 5.3"
 
 # Chapter 5.3: Unique Collections
 
-GLang provides a unique collection in its standard library, [`std_hashmap`](/docs/modules/std_hashmap).
+GLang provides a unique collection in the standard library, [`std_hashmap`](/docs/modules/std_hashmap).
 
 The `std_hashmap` module isn’t built in by default, so you’ll need to import it using the `fetch` keyword. We’ll cover `fetch` in more detail later, but for now, just add it to the top of your file.
 

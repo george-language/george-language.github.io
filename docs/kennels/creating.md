@@ -4,46 +4,44 @@ title: "Creating Kennels"
 
 # Creating Kennels
 
-Kennels are GLang packages. They use a simple project structure:
+Kennels use a simple project structure:
 
 ```
+src/        <- project files (bundled automatically)
 lib.glang   <- entry point
 kennel.toml <- package configuration
-README.md   <- package info
-LICENSE     <- license of your choice
+.gitignore  <- git configuration (if git is used)
 ```
 
-Kennels **must** be hosted on GitHub. GLang indexes kennels from GitHub source `.zip` files.
-
-👉 To save time, start with our [Kennel Template](https://github.com/george-language/glang-kennel-template).
+You can use `glang new kennel` to automatically generate this configuration for you.
 
 ## Configuring `kennel.toml`
 
-Here’s an example configuration:
+`kennel.toml` uses the TOML syntax to assign various fields for configuring your kennel.
 
 ```toml
-name = "my_kennel"                             # snake_case "easy import identifier" (EII)
-description = "This kennel does cool things!"  # one-line description
-authors = ["John Doe"]                         # list of authors
-version = "1.0"                                # kennel version
+[package]
+name = "my_kennel"                             # snake case name of your package
+version = "0.1.0"                              # kennel version (semantic only)
 entry = "lib.glang"                            # entry point (main file users import)
-requires = []                                  # list of external kennels required
+
+[requirements] 
+# list of external kennels required 
+# name = version
 ```
 
 ### Key fields
 
-* **`name`**: Your kennel’s **import name**. Must be `snake_case`.
-* **`entry`**: The GLang file that loads when someone imports your kennel.
-* **`requires`**: Add any external kennels (by name) your kennel depends on.
+- **`name`**: Your kennel’s **import name**. Must be `snake_case`.
+- **`entry`**: The GLang file that loads when someone imports your kennel.
+- **`requirements`**: Add any external kennels (by name/version) your kennel depends on.
 
-## Publishing Your Kennel
+## Distributing Your Kennel
 
-GLang maintains a registry of all installable kennels in [registry.json](https://github.com/george-language/glang/blob/main/registry.json).
+Your kennel can be distributed by creating an installable `.kennel` file.
 
-To publish:
+```sh
+glang package
+```
 
-1. Go to the [GLang Issues page](https://github.com/george-language/glang/issues).
-2. Open a new issue with your kennel’s repository link.
-3. Add the `kennel` label.
-
-Once reviewed, your kennel will be approved and added to the registry 🎉
+This will build and resolve any requirements, ensuring the kennel is ready for distribution. The final kennel is created as `name-version.kennel`

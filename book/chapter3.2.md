@@ -39,7 +39,7 @@ while game_is_running() {
 }
 ```
 
-## `walk`
+## Range Loops: `walk`
 
 The `walk` loop gives you more **control**. Instead of looping until some condition changes, you define exactly how many times it should run.
 
@@ -49,19 +49,37 @@ walk i = 0 through 10 {
 }
 ```
 
-Here’s what happens:
+`i` starts at 0, and the loop runs while `i` is less than 10. Each time through, `i` increases by 1 automatically.
 
-- `i` starts at 0
-- The loop runs while `i` is less than 10
-- Each time through, `i` increases by 1 automatically
-
-Therefore, this outputs: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
+Therefore, this outputs: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9` in the terminal.
 
 You can also control how much `i` increases each time with the optional `step` keyword:
 
 ```glang
 walk i = 0 through 10 step = 2 {
     bark(i); # outputs 0, 2, 4, 6, 8
+}
+```
+
+## Iterator Loops: `walk`
+
+The `walk` loop also gives you the ability to loop through an object (often called an iterator)
+
+```glang
+obj my_list = [1, 2, 3];
+
+walk i through my_list {
+    bark(i); # outputs 1, 2, 3 (each element in the list)
+}
+```
+
+Each time through the loop, `i` is set to the next element in the iterator. Both the list and string type are iterators, meaning you can also loop through the characters in a string too:
+
+```glang
+obj string = "hello";
+
+walk i through string {
+    bark(i); # outputs h, e, l, l, o (each character in the string)
 }
 ```
 

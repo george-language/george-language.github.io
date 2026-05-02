@@ -21,34 +21,67 @@ For this chapter, we’ll use a kennel called `fancy-terminal`, it gives you eas
 First, make sure you’ve installed the kennel:
 
 ```sh
-glang install fancy-terminal
+glang install https://github.com/george-language/fancy-terminal/releases/latest/download/fancy_terminal.kennel
 ```
 
 Then import it into your program:
 
 ```glang
-fetch fancy_terminal; # enables color and style support
+fetch "fancy_terminal@latest"; # enables color and style support
 
 bark(GREEN + "All systems ok." + RESET);
 bark(RED + "A critical error occurred!" + RESET);
 ```
 
 **How it works:**
-Each color (like `RED` or `GREEN`) is just a special string variable that tells your terminal to display text in that color until it hits a `RESET`. You can also mix and match styles like `BOLD`, `ITALIC`, or `UNDERLINE` to make your output *pop*.
+Each color (like `RED` or `GREEN`) is just a special string variable that tells your terminal to display text in that color until it hits a `RESET`. You can also mix and match styles like `BOLD`, `ITALIC`, or `UNDERLINE` to make your output more styled.
 
 For a full list of supported colors and styles, check out the [official docs](https://github.com/george-language/fancy-terminal?tab=readme-ov-file#supported-styles).
 
 ## Step 3: Applying Styles to Your Banking System
 
-Now that you’ve got `fancy-terminal` installed, you can make your bank’s messages easier to read (and way cooler).
+Now that you’ve got `fancy-terminal` installed, you can make your bank’s messages easier to read (and way cooler). To import `fancy-terminal`, we use the `fetch` syntax:
+
+```glang
+fetch "fancy_terminal@latest";
+```
+
+_More info on importing kennels [here](/docs/kennels/#using-a-kennel)_
 
 For example, in **`system.glang`**, you can highlight error messages in red:
 
 ```glang
-# system.glang
-# ...
+fetch std_hashmap;
+fetch std_format;
+fetch "fancy_terminal@latest";
+fetch "account.glang"; # we need the 'account_exists' function
 
-bark(RED + format("Error: account '{}' not found", name) + RESET);
+func make_deposit(accounts, name, amount) {
+    if account_exists(accounts, name) {
+        # account exists, so make the deposit by setting 'name: amount'
+        hashmap_set(accounts, name, amount);
+    } otherwise {
+        bark(format(RED + "Error: account '{}' not found" + RESET, name));
+    }
+}
+
+func make_withdrawl(accounts, name, amount) {
+    if account_exists(accounts, name) {
+        obj og_amount = hashmap_get(accounts, name);
+        obj new_amount = og_amount - amount;
+
+        # can't withdraw an amount past 0
+        if new_amount < 0 {
+            bark(RED + "Error: invalid balance after withdrawl" + RESET);
+
+            give null; # return and stop the function
+        }
+
+        hashmap_set(accounts, name, new_amount);
+    } otherwise {
+        bark(format(RED + "Error: account '{}' not found" + RESET, name));
+    }
+}
 ```
 
 You can even go wild with color-coded output:

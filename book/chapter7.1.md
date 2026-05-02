@@ -4,7 +4,7 @@ title: "Chapter 7.1"
 
 # Chapter 7.1: Modules
 
-As your program grows (we’re talking hundreds or even thousands of lines), keeping everything in one file can get _messy_. That’s why programmers love to break their code into smaller, organized pieces called **modules**.
+Organizing code can be done by creating pieces called **modules**.
 
 ```glang
 fetch "path/to/my/module.glang";
@@ -17,13 +17,13 @@ A module is just another file that contains code you can reuse elsewhere. Think 
 In GLang, you can use the `fetch` keyword to import everything from a module location. Once imported, anything defined inside that file becomes available to the current one.
 
 ```glang
-# module.glang
+# file: src/my_module.glang
 obj x = 10;
 ```
 
 ```glang
-# main.glang
-fetch "module.glang";
+# file: main.glang
+fetch "src/my_module.glang";
 
 bark(x); # outputs 10
 ```
@@ -33,7 +33,7 @@ Because `fetch` expects a string, you can even build the path dynamically using 
 ```glang
 # main.glang
 obj extension = ".glang";
-obj filename = "module";
+obj filename = "src/my_module";
 
 fetch filename + extension;
 

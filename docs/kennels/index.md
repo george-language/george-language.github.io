@@ -4,48 +4,52 @@ title: "About Kennels"
 
 # About Kennels
 
-Kennels are how you share and reuse GLang code.
+Kennels are GLang projects packaged into compressed data, that can be installed on other user machines to use your code. 
 
-Think of them as little doghouses full of useful code. You can download one, and then **import it into your project**!
+Your machine contains a registry of all installed kennels, so that when a `.kennel` file is installed, it can be managed, versioned, and stored safely.
 
 ## Installing a Kennel
 
 You can install kennels with:
 
 ```sh
-glang install <kennel_name>
+glang install path/to/kennel/file
+```
+
+They can also be installed from URLs:
+
+```sh
+glang install https://example.com/example.kennel
 ```
 
 Kennels are stored in your local machine at:
 
 ```
-.glang/kennels/
+.glang/
 ```
 
-They act as **global imports**, any GLang project on your system can use them.
+And the registry is inside:
+
+```
+.glang/packages.json
+```
+
+Kennels are installed at the global level; any GLang project on your system can use them.
 
 ## Managing Kennels
 
-- **Remove a kennel:**
+A kennel can be removed using the name in the registry.
 
-  ```sh
-  glang remove <kennel_name>
-  ```
-
-- **Update a kennel:**
-
-  ```sh
-  glang update <kennel_name>
-  ```
-
-  _(GLang won’t auto-update kennels; you’re in control!)_
+```sh
+glang remove <name>
+```
 
 ## Using a Kennel
 
-When you install a kennel, GLang gives it an **Easy Import Identifier (EII)**, usually the same as the kennel’s name.
+Kennels are imported using [`fetch`](/docs/keywords/fetch). They are referenced with `name` and `version`, separated by `@`.
 
 ```glang
-fetch kennel_name;
-
-kennels_function();
+fetch "name@version"; # name = kennel name, version = kennel version
 ```
+
+If `version` is `latest`, GLang will pull the latest version of that kennel and use it.

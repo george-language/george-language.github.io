@@ -4,7 +4,7 @@ title: "Chapter 3.2.1"
 
 # Chapter 3.2.1: Next and Leave
 
-In the last chapter, we explored `walk` and `while` loops and how to create them. GLang gives you further control of these loops with the `next` and `leave` keywords.
+GLang gives you further control of the `walk` and `while` loops with the `next` and `leave` keywords.
 
 ## `next`
 

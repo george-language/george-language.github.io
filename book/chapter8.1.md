@@ -22,11 +22,11 @@ banking_system/
 
 Here’s what each file will do:
 
-* `account.glang`: Knows how to add accounts and verify if one exists.
-* `system.glang`: Controls how money moves in and out of those accounts.
-* `main.glang`: Acts as our "bank clerk" and talks directly to the user.
+- `src/account.glang`: Knows how to add accounts and verify if one exists.
+- `src/system.glang`: Controls how money moves in and out of those accounts.
+- `main.glang`: Acts as our "bank clerk" and talks directly to the user.
 
-## Step 2: Managing Accounts (`account.glang`)
+## Step 2: Managing Accounts (`src/account.glang`)
 
 This file is the foundation of our system. It defines how accounts are **stored**, **checked**, and **added** to the registry.
 
@@ -34,7 +34,7 @@ This file is the foundation of our system. It defines how accounts are **stored*
 fetch std_hashmap;
 fetch std_format;
 
-# Checks if a name already exists in the account registry.
+# this checks if a name is inside the account registry
 func account_exists(accounts, name) {
     if contains(hashmap_keys(accounts), name) {
         give true;
@@ -43,7 +43,7 @@ func account_exists(accounts, name) {
     }
 }
 
-# Adds a new account to the registry with an initial balance.
+# adds an account to the registry
 func add_account(accounts, name, balance) {
     hashmap_set(accounts, name, balance);
 }
@@ -55,34 +55,34 @@ func add_account(accounts, name, balance) {
 - `account_exists()` prevents duplicate accounts or invalid operations on non-existent ones.
 - `add_account()` is a simple wrapper to store new data in the hashmap.
 
-## Step 3: Transaction Logic (`system.glang`)
+## Step 3: Transaction Logic (`src/system.glang`)
 
 Now that we can store and find accounts, it’s time to handle **transactions** like deposits and withdrawals.
 
 ```glang
 fetch std_hashmap;
 fetch std_format;
-fetch "account.glang"; # We need 'account_exists' from the account file.
+fetch "account.glang"; # we need the 'account_exists' function
 
-# Deposits money into an account.
 func make_deposit(accounts, name, amount) {
     if account_exists(accounts, name) {
+        # account exists, so make the deposit by setting 'name: amount'
         hashmap_set(accounts, name, amount);
     } otherwise {
         bark(format("Error: account '{}' not found", name));
     }
 }
 
-# Withdraws money, with basic error checking.
 func make_withdrawl(accounts, name, amount) {
     if account_exists(accounts, name) {
         obj og_amount = hashmap_get(accounts, name);
         obj new_amount = og_amount - amount;
 
-        # Prevents overdrafts — no negative balances allowed.
+        # can't withdraw an amount past 0
         if new_amount < 0 {
             bark("Error: invalid balance after withdrawl");
-            give null; # Stop execution early.
+
+            give null; # return and stop the function
         }
 
         hashmap_set(accounts, name, new_amount);
@@ -104,7 +104,7 @@ fetch std_format;
 fetch "src/account.glang";
 fetch "src/system.glang";
 
-obj accounts = hashmap(); # Our central registry of all accounts.
+obj accounts = hashmap();
 
 while true {
     bark("\n** Welcome to the bank! **\n");
@@ -114,57 +114,53 @@ while true {
     bark("4. Check account balance");
     bark("5. Exit\n");
 
-    obj input = chew("Enter an option: ");
+    obj input = trim(chew("Enter an option: ")); # we want to trim the input because the user might enter ' 5 '
 
     if input == "1" {
         obj name = chew("Enter the account name: ");
         obj amount = chew("Enter an amount to withdraw: ");
 
         try {
-            amount = tonumber(amount);
+            amount = tonumber(amount); # convert the amount to a number type
         } catch _ {
             bark("Invalid amount");
         }
 
         make_withdrawl(accounts, name, amount);
-
-    } alsoif input == "2" {
+    } also if input == "2" {
         obj name = chew("Enter the account name: ");
         obj amount = chew("Enter an amount to deposit: ");
 
         try {
-            amount = tonumber(amount);
+            amount = tonumber(amount); # convert the amount to a number type
         } catch _ {
             bark("Invalid amount");
         }
 
         make_deposit(accounts, name, amount);
-
-    } alsoif input == "3" {
+    } also if input == "3" {
         obj name = chew("Enter the account name: ");
         obj starting_balance = chew("Enter the starting balance for this account: ");
 
         try {
-            starting_balance = tonumber(starting_balance);
+            starting_balance = tonumber(starting_balance); # convert the balance to a number type
         } catch _ {
             bark("Invalid starting balance");
         }
 
         add_account(accounts, name, starting_balance);
-
-    } alsoif input == "4" {
+    } also if input == "4" {
         obj name = chew("Enter the account name: ");
 
         if account_exists(accounts, name) {
             obj amount = hashmap_get(accounts, name);
+            
             bark(format("Your account balance is: {}", amount));
         } otherwise {
             bark(format("Error: account '{}' not found", name));
         }
-
-    } alsoif input == "5" {
-        leave; # Exit the program gracefully.
-
+    } also if input == "5" {
+        leave;
     } otherwise {
         bark("Invalid option");
     }

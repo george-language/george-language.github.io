@@ -10,7 +10,9 @@ We can perform many string operations (similar to lists) like indexing, reversin
 
 ```glang
 obj my_string = "12345";
-obj first_char = charat(my_string, 0); # '1'
+obj first_char = charat(my_string, 0); 
+
+bark(first_char); # 1
 ```
 
 ## String Operations
@@ -21,16 +23,21 @@ Reversing a string is a great example, as the string is copied, then recreated i
 
 ```glang
 obj forwards = "abcd";
-obj backwards = reverse(forwards); # 'dcba'
+obj backwards = reverse(forwards);
+
+bark(backwards); # dcba
 ```
 
 Strings support some mathematical operands too. The `+` operand adds two strings together, and you can even use the `*` operator to multiply a string.
 
 ```glang
-obj hello_world = "Hello, " + "world!"; # 'Hello, world!'
-obj excited_happy_birthday = "Happy Birthday!" * 3; # 'Happy Birthday!Happy Birthday!Happy Birthday!'
+obj hello_world = "Hello, " + "world!"; 
+bark(hello_world); # 'Hello, world!'
+
+obj excited_happy_birthday = "Happy Birthday!" * 3; 
+bark(excited_happy_birthday) # 'Happy Birthday!Happy Birthday!Happy Birthday!'
 ```
 
 ## Other String Operations
 
-Just like lists, strings come with a bunch of built-in operations other than the ones listed here. A full list of available operations is in the [string documentation](/docs/types/string#operations).
+Similar to lists, strings come with a bunch of built-in operations other than the ones listed here. A full list of available operations is in the [string documentation](/docs/types/string#operations).

@@ -12,7 +12,7 @@ obj nothing = null;
 bark(nothing); # outputs '0' because the null value in binary is 0
 ```
 
-Since the null value is technically a boolean, boolean operations can be performed on null.
+Since the null value is technically a boolean attribute, boolean operations can be performed on null.
 
 ```glang
 bark(not null); # true!

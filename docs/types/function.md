@@ -4,7 +4,7 @@ title: "function"
 
 # Type: `function`
 
-A set of code that can be "called" to run it.
+A section of code that can be "called" to run it.
 
 ```glang
 func example() {
@@ -12,6 +12,14 @@ func example() {
 }
 
 example(); # call the function
+```
+
+Functions are treated as variable names, allowing you to use them as "variables".
+
+```glang
+obj new_bark = bark;
+
+new_bark("Hello, world!"); # inherits the implementation of the 'bark' function
 ```
 
 # Operations
